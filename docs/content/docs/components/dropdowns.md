@@ -3,7 +3,7 @@ title: Dropdowns
 description: PaperCSS Dropdowns
 ---
 
-Use dropdown classes when an application controls the open state with JavaScript. Add `.paper-dropdown-open` to the trigger or wrapper while the menu is open. Menu buttons can use `.paper-dropdown-item-selected` or `aria-selected="true"` for the active item.
+Use dropdown classes when an application controls the open state with JavaScript. Add `.paper-dropdown-open` to the trigger or wrapper while the menu is open. Menu buttons can use `.paper-dropdown-item-selected` or `aria-selected="true"` for the active item. Selected and hovered item fills are inset with the same hand-drawn radius treatment as other PaperCSS controls.
 
 <div class="paper-dropdown paper-dropdown-open">
   <button class="paper-dropdown-trigger paper-dropdown-open" type="button" aria-expanded="true">

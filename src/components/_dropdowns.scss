@@ -77,21 +77,24 @@
 }
 
 .paper-dropdown-item {
+  @include border-style(4);
   @include color('background-color', 'main-background');
   @include color('color', 'primary');
   border: 0;
   box-shadow: none;
+  box-sizing: border-box;
   cursor: pointer;
   display: block;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.2;
+  margin: 0.12rem 0.22rem;
   min-height: 0;
   outline: none;
   padding: 0.5rem 0.6rem;
   text-align: left;
   transition: all 0.1s ease;
-  width: 100%;
+  width: calc(100% - 0.44rem);
 
   &:hover,
   &:focus {

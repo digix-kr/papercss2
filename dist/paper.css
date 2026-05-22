@@ -2111,23 +2111,29 @@ button.btn-muted-outline:hover:active,
 }
 
 .paper-dropdown-item {
+  border-bottom-left-radius: 25px 115px;
+  border-bottom-right-radius: 155px 25px;
+  border-top-left-radius: 15px 225px;
+  border-top-right-radius: 25px 150px;
   background-color: #41403e;
   background-color: var(--main-background);
   color: #41403e;
   color: var(--primary);
   border: 0;
   box-shadow: none;
+  box-sizing: border-box;
   cursor: pointer;
   display: block;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.2;
+  margin: 0.12rem 0.22rem;
   min-height: 0;
   outline: none;
   padding: 0.5rem 0.6rem;
   text-align: left;
   transition: all 0.1s ease;
-  width: 100%;
+  width: calc(100% - 0.44rem);
 }
 .paper-dropdown-item:hover, .paper-dropdown-item:focus {
   background-color: #41403e;
