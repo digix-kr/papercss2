@@ -1,6 +1,6 @@
 # Capsule Guidelines
 
-`docs/infos/` contains focused, agent-readable capsules. These files are
+`.docs/infos/` contains focused, agent-readable capsules. These files are
 maintained by AI agents and reviewed through normal Git history.
 
 ## Rules
