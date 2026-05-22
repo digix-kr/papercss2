@@ -1,7 +1,7 @@
 # Agent Documentation Index
 
 This file is the first stop for AI coding agents working in this repository.
-Use it to decide which focused capsule under `.docs/infos/` is relevant. Do not
+Use it to decide which focused capsule under `docs/infos/` is relevant. Do not
 load every capsule by default.
 
 ## How To Use This Index
@@ -13,13 +13,13 @@ load every capsule by default.
 
 ## Capsule Directory
 
-Capsules live in `.docs/infos/`.
+Capsules live in `docs/infos/`.
 
 Current capsules:
 
-- `.docs/infos/README.md`: Capsule writing rules and maintenance expectations.
-- `.docs/infos/build-workflow.md`: CSS build outputs and command behavior.
-- `.docs/infos/downstream-consumption.md`: Recommended way to consume this fork from another project during active development.
+- `docs/infos/README.md`: Capsule writing rules and maintenance expectations.
+- `docs/infos/build-workflow.md`: CSS build outputs and command behavior.
+- `docs/infos/downstream-consumption.md`: Recommended way to consume this fork from another project during active development.
 
 ## Project Map
 
@@ -44,7 +44,7 @@ Current capsules:
 
 ## Maintenance Triggers
 
-Update `.docs/infos/` and this index when:
+Update `docs/infos/` and this index when:
 
 - A new build, release, import, or local development workflow is established.
 - Source organization changes in a way future agents should know.
