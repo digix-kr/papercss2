@@ -25,9 +25,9 @@ ante. Quisque diam nisl, vestibulum imperdiet sapien nec, interdum fringilla
 lorem. Morbi sed arcu facilisis, maximus justo vel, porttitor nisl. Nam suscipit
 metus facilisis iaculis vestibulum.
 
-Links use a PaperCSS underline made from repeated hand-drawn strokes. Visited
-links keep the same link color, and hover or keyboard focus thickens the
-underline while shifting the text to the primary color.
+Links use a PaperCSS underline made from a flowing hand-drawn stroke. Visited
+links keep the same link color, and hover or keyboard focus makes the stroke
+more visible while shifting the text to the primary color.
 
 Read the <a href="/docs/components/forms/">forms documentation</a> or visit
 the <a href="https://github.com/digix-kr/papercss2">PaperCSS2 repository</a>.

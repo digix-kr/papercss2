@@ -107,7 +107,7 @@
     &:focus,
     &:focus-visible {
       @include color('color', 'primary');
-      background-size: 5px 4px;
+      background-size: 2.85em 0.52em;
       text-decoration: none;
     }
 
