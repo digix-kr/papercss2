@@ -20,6 +20,7 @@ Current capsules:
 - `docs/infos/README.md`: Capsule writing rules and maintenance expectations.
 - `docs/infos/build-workflow.md`: CSS build outputs and command behavior.
 - `docs/infos/downstream-consumption.md`: Recommended way to consume this fork from another project during active development.
+- `docs/infos/release-policy.md`: Release-time documentation update checklist for this fork.
 
 ## Project Map
 

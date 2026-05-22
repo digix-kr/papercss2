@@ -6,13 +6,14 @@ weight: -270
 
 #### Download
 
-Download the latest version (1.9.2) using either of the links below. Or
-download an older release via GitHub.
+Official release download links are maintained during release.
+If links below still point to placeholders, use NPM/CDN for immediate usage and
+check release preparation guidance in `docs/infos/release-policy.md`.
 
 <div class="row flex-spaces text-center">
-  <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.9.2/paper.css">CSS File</a>
-  <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.9.2/paper.min.css">Minified CSS File</a>
-  <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases">GitHub Releases</a>
+  <a class="paper-btn margin" href="https://github.com/digix-kr/papercss/releases">GitHub Releases</a>
+  <a class="paper-btn margin" href="https://www.npmjs.com/package/papercss">NPM Package</a>
+  <a class="paper-btn margin" href="https://unpkg.com/papercss/">unpkg CDN</a>
 </div>
 
 #### NPM
@@ -59,7 +60,7 @@ Here's a quick snippet to get started with PaperCSS:
 If you'd rather customize things, you can build the CSS yourself via the git repo
 
 ```sh
-git clone https://github.com/papercss/papercss.git
+git clone https://github.com/digix-kr/papercss.git
 cd papercss
 npm install
 npm run build
