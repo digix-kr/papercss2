@@ -200,6 +200,11 @@ html.dark {
   @param string
   @default all | 235ms | ease-in-out | 0
 */
+/*
+  Add the hand-drawn PaperCSS underline treatment to text links.
+  @param color
+  @default $secondary
+*/
 /**
   Set the shadow type for a component
   @param    string
@@ -1699,17 +1704,30 @@ button.disabled, button[disabled],
 }
 
 a {
+  background-image: linear-gradient(5deg, transparent 64%, rgba(11, 116, 213, 0.78) 78%, transparent 90%), linear-gradient(165deg, transparent 5%, rgba(11, 116, 213, 0.78) 15%, transparent 28%), linear-gradient(165deg, transparent 44%, rgba(11, 116, 213, 0.78) 56%, transparent 68%), linear-gradient(15deg, transparent 24%, rgba(11, 116, 213, 0.78) 35%, transparent 50%);
+  background-position: 0 94%;
+  background-repeat: repeat-x;
+  background-size: 5px 3px;
   color: #41403e;
   color: var(--secondary);
-  background-image: linear-gradient(5deg, transparent 65%, #0b74d5 80%, transparent 90%), linear-gradient(165deg, transparent 5%, #0b74d5 15%, transparent 25%), linear-gradient(165deg, transparent 45%, #0b74d5 55%, transparent 65%), linear-gradient(15deg, transparent 25%, #0b74d5 35%, transparent 50%);
-  background-position: 0 90%;
-  background-repeat: repeat-x;
-  background-size: 4px 3px;
   text-decoration: none;
 }
 a:visited {
   color: #41403e;
+  color: var(--secondary);
+}
+a:hover, a:focus-visible {
+  color: #41403e;
   color: var(--primary);
+  background-size: 5px 4px;
+}
+a:focus-visible {
+  outline: 2px dashed rgba(65, 64, 62, 0.7);
+  outline-offset: 0.16rem;
+}
+a.paper-btn {
+  background-image: none;
+  outline-offset: 0;
   text-decoration: none;
 }
 
@@ -2001,6 +2019,134 @@ button.btn-muted-outline:hover:active,
   border-radius: 0;
 }
 
+.paper-dropdown {
+  align-items: stretch;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.paper-dropdown-trigger {
+  border-bottom-left-radius: 25px 115px;
+  border-bottom-right-radius: 155px 25px;
+  border-top-left-radius: 15px 225px;
+  border-top-right-radius: 25px 150px;
+  background-color: #41403e;
+  background-color: var(--main-background);
+  border-color: #41403e;
+  border-color: var(--primary);
+  color: #41403e;
+  color: var(--primary);
+  align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 1px 1px 0 rgba(65, 64, 62, 0.07);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  justify-content: space-between;
+  line-height: 1.2;
+  min-height: 2.35rem;
+  padding: 0.35rem 0.6rem;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.paper-dropdown-trigger:hover {
+  border-color: #41403e;
+  border-color: var(--primary-light-10);
+  box-shadow: 1px 1px 0 rgba(65, 64, 62, 0.12);
+}
+.paper-dropdown-trigger:focus, .paper-dropdown-trigger.paper-dropdown-open {
+  border-color: #41403e;
+  border-color: var(--secondary);
+  box-shadow: 1px 1px 0 rgba(65, 64, 62, 0.2);
+  outline: none;
+}
+
+.paper-dropdown-label {
+  flex: 1;
+  text-align: left;
+}
+
+.paper-dropdown-icon {
+  color: #41403e;
+  color: var(--primary);
+  flex-shrink: 0;
+  height: 1rem;
+  width: 1rem;
+}
+
+.paper-dropdown-menu {
+  border-bottom-left-radius: 15px 225px;
+  border-bottom-right-radius: 20px 205px;
+  border-top-left-radius: 28px 125px;
+  border-top-right-radius: 100px 30px;
+  background-color: #41403e;
+  background-color: var(--main-background);
+  border-color: #41403e;
+  border-color: var(--primary);
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 0 rgba(65, 64, 62, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
+  display: none;
+  left: 0;
+  margin-top: 0.35rem;
+  min-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 100;
+}
+
+.paper-dropdown-trigger.paper-dropdown-open + .paper-dropdown-menu,
+.paper-dropdown.paper-dropdown-open .paper-dropdown-menu,
+.paper-dropdown:focus-within .paper-dropdown-menu {
+  display: block;
+}
+
+.paper-dropdown-item {
+  background-color: #41403e;
+  background-color: var(--main-background);
+  color: #41403e;
+  color: var(--primary);
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  min-height: 0;
+  outline: none;
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  transition: all 0.1s ease;
+  width: 100%;
+}
+.paper-dropdown-item:hover, .paper-dropdown-item:focus {
+  background-color: #41403e;
+  background-color: var(--primary-shaded-70);
+  box-shadow: none;
+}
+.paper-dropdown-item.paper-dropdown-item-selected, .paper-dropdown-item[aria-selected=true] {
+  background-color: #41403e;
+  background-color: var(--primary);
+  color: #41403e;
+  color: var(--primary-inverse);
+}
+.paper-dropdown-item.paper-dropdown-item-selected:hover, .paper-dropdown-item.paper-dropdown-item-selected:focus, .paper-dropdown-item[aria-selected=true]:hover, .paper-dropdown-item[aria-selected=true]:focus {
+  background-color: #41403e;
+  background-color: var(--primary);
+  color: #41403e;
+  color: var(--primary-inverse);
+}
+
 input,
 select,
 textarea {
@@ -2029,7 +2175,52 @@ textarea:focus {
   border-width: 2px;
 }
 select {
-  height: 2.35rem;
+  background-color: #41403e;
+  background-color: var(--main-background);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%2024%2024'%20fill%3D'none'%20stroke%3D'%2341403e'%20stroke-width%3D'2.5'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'%3E%3Cpath%20d%3D'm6%209%206%206%206-6'%3E%3C/path%3E%3C/svg%3E");
+  background-position: right 0.55rem center;
+  background-repeat: no-repeat;
+  background-size: 0.85rem;
+  box-shadow: 1px 1px 0 rgba(65, 64, 62, 0.07);
+  cursor: pointer;
+  font-weight: 700;
+  height: auto;
+  line-height: 1.2;
+  min-height: 2.35rem;
+  padding-right: 2rem;
+}
+select:hover {
+  border-color: #41403e;
+  border-color: var(--primary-light-10);
+  box-shadow: 1px 1px 0 rgba(65, 64, 62, 0.12);
+}
+select:focus {
+  box-shadow: 1px 1px 0 rgba(65, 64, 62, 0.2);
+}
+
+.paper-select-wrapper {
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+}
+.paper-select-wrapper select,
+.paper-select-wrapper .paper-select {
+  background-image: none;
+  padding-right: 1.8rem;
+}
+
+.paper-select-icon {
+  color: #41403e;
+  color: var(--primary);
+  flex-shrink: 0;
+  height: 1rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0.45rem;
+  width: 1rem;
 }
 
 .disabled, input.disabled, input[disabled],
@@ -2492,20 +2683,33 @@ fieldset.form-group {
 }
 .modal .modal-link,
 .modal a {
-  background-image: linear-gradient(5deg, transparent 65%, #0b74d5 80%, transparent 90%), linear-gradient(165deg, transparent 5%, #0b74d5 15%, transparent 25%), linear-gradient(165deg, transparent 45%, #0b74d5 55%, transparent 65%), linear-gradient(15deg, transparent 25%, #0b74d5 35%, transparent 50%);
-  background-position: 0 90%;
+  background-image: linear-gradient(5deg, transparent 64%, rgba(11, 116, 213, 0.78) 78%, transparent 90%), linear-gradient(165deg, transparent 5%, rgba(11, 116, 213, 0.78) 15%, transparent 28%), linear-gradient(165deg, transparent 44%, rgba(11, 116, 213, 0.78) 56%, transparent 68%), linear-gradient(15deg, transparent 24%, rgba(11, 116, 213, 0.78) 35%, transparent 50%);
+  background-position: 0 94%;
   background-repeat: repeat-x;
-  background-size: 4px 3px;
+  background-size: 5px 3px;
+  color: #41403e;
+  color: var(--secondary);
   cursor: pointer;
   text-decoration: none;
 }
-.modal .modal-link:hover, .modal .modal-link:focus, .modal .modal-link:visited,
-.modal a:hover,
-.modal a:focus,
+.modal .modal-link:visited,
 .modal a:visited {
   color: #41403e;
+  color: var(--secondary);
+}
+.modal .modal-link:hover, .modal .modal-link:focus, .modal .modal-link:focus-visible,
+.modal a:hover,
+.modal a:focus,
+.modal a:focus-visible {
+  color: #41403e;
   color: var(--primary);
+  background-size: 5px 4px;
   text-decoration: none;
+}
+.modal .modal-link:focus-visible,
+.modal a:focus-visible {
+  outline: 2px dashed rgba(65, 64, 62, 0.7);
+  outline-offset: 0.16rem;
 }
 
 .modal-state {

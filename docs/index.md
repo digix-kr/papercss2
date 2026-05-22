@@ -27,7 +27,7 @@ Current capsules:
 - `src/styles.scss`: SCSS entrypoint for PaperCSS.
 - `src/core/`: Core reset, configuration, and mixins.
 - `src/content/`: Base content styles such as typography, lists, tables, images, fonts, and code.
-- `src/components/`: Component styles such as buttons, forms, cards, tabs, modals, navbar, alerts, and utilities.
+- `src/components/`: Component styles such as buttons, dropdowns, forms, cards, tabs, modals, navbar, alerts, and utilities.
 - `src/layout/`: Layout helpers such as container and flexbox.
 - `src/utilities/`: Border and shadow utilities.
 - `build/build.js`: CSS build script that compiles SCSS, runs autoprefixer/cssnano, and writes `dist/paper.css`, `dist/paper.min.css`, and docs CSS.

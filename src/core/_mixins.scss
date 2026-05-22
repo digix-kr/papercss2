@@ -115,6 +115,24 @@
   transition: $name $duration $animation $delay;
 }
 
+/*
+  Add the hand-drawn PaperCSS underline treatment to text links.
+  @param color
+  @default $secondary
+*/
+@mixin paper-link-underline($color: $secondary) {
+  $underline-color: rgba($color, 0.78);
+
+  background-image:
+    linear-gradient(5deg, transparent 64%, $underline-color 78%, transparent 90%),
+    linear-gradient(165deg, transparent 5%, $underline-color 15%, transparent 28%),
+    linear-gradient(165deg, transparent 44%, $underline-color 56%, transparent 68%),
+    linear-gradient(15deg, transparent 24%, $underline-color 35%, transparent 50%);
+  background-position: 0 94%;
+  background-repeat: repeat-x;
+  background-size: 5px 3px;
+}
+
 /**
   Set the shadow type for a component
   @param    string

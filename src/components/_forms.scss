@@ -28,7 +28,50 @@ textarea {
 }
 
 select {
-  height: 2.35rem;
+  @include color('background-color', 'main-background');
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%2024%2024'%20fill%3D'none'%20stroke%3D'%2341403e'%20stroke-width%3D'2.5'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'%3E%3Cpath%20d%3D'm6%209%206%206%206-6'%3E%3C/path%3E%3C/svg%3E");
+  background-position: right 0.55rem center;
+  background-repeat: no-repeat;
+  background-size: 0.85rem;
+  box-shadow: 1px 1px 0 rgba($primary, 0.07);
+  cursor: pointer;
+  font-weight: 700;
+  height: auto;
+  line-height: 1.2;
+  min-height: 2.35rem;
+  padding-right: 2rem;
+
+  &:hover {
+    @include color('border-color', 'primary-light-10');
+    box-shadow: 1px 1px 0 rgba($primary, 0.12);
+  }
+
+  &:focus {
+    box-shadow: 1px 1px 0 rgba($primary, 0.2);
+  }
+}
+
+.paper-select-wrapper {
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+
+  select,
+  .paper-select {
+    background-image: none;
+    padding-right: 1.8rem;
+  }
+}
+
+.paper-select-icon {
+  @include color('color', 'primary');
+  flex-shrink: 0;
+  height: 1rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0.45rem;
+  width: 1rem;
 }
 
 .disabled {

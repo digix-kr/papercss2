@@ -1,0 +1,115 @@
+.paper-dropdown {
+  align-items: stretch;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.paper-dropdown-trigger {
+  @include border-style(4);
+  @include color('background-color', 'main-background');
+  @include color('border-color', 'primary');
+  @include color('color', 'primary');
+  align-items: center;
+  appearance: none;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 1px 1px 0 rgba($primary, 0.07);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  justify-content: space-between;
+  line-height: 1.2;
+  min-height: 2.35rem;
+  padding: 0.35rem 0.6rem;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+
+  &:hover {
+    @include color('border-color', 'primary-light-10');
+    box-shadow: 1px 1px 0 rgba($primary, 0.12);
+  }
+
+  &:focus,
+  &.paper-dropdown-open {
+    @include color('border-color', 'secondary');
+    box-shadow: 1px 1px 0 rgba($primary, 0.2);
+    outline: none;
+  }
+}
+
+.paper-dropdown-label {
+  flex: 1;
+  text-align: left;
+}
+
+.paper-dropdown-icon {
+  @include color('color', 'primary');
+  flex-shrink: 0;
+  height: 1rem;
+  width: 1rem;
+}
+
+.paper-dropdown-menu {
+  @include border-style(6);
+  @include color('background-color', 'main-background');
+  @include color('border-color', 'primary');
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 2px 2px 0 rgba($primary, 0.12), 0 4px 8px rgba($black, 0.08);
+  display: none;
+  left: 0;
+  margin-top: 0.35rem;
+  min-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 100;
+}
+
+.paper-dropdown-trigger.paper-dropdown-open + .paper-dropdown-menu,
+.paper-dropdown.paper-dropdown-open .paper-dropdown-menu,
+.paper-dropdown:focus-within .paper-dropdown-menu {
+  display: block;
+}
+
+.paper-dropdown-item {
+  @include color('background-color', 'main-background');
+  @include color('color', 'primary');
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  min-height: 0;
+  outline: none;
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  transition: all 0.1s ease;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    @include color('background-color', 'primary-shaded-70');
+    box-shadow: none;
+  }
+
+  &.paper-dropdown-item-selected,
+  &[aria-selected='true'] {
+    @include color('background-color', 'primary');
+    @include color('color', 'primary-inverse');
+  }
+
+  &.paper-dropdown-item-selected:hover,
+  &.paper-dropdown-item-selected:focus,
+  &[aria-selected='true']:hover,
+  &[aria-selected='true']:focus {
+    @include color('background-color', 'primary');
+    @include color('color', 'primary-inverse');
+  }
+}

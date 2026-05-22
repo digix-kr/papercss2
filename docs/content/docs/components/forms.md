@@ -2,6 +2,8 @@
 title: Forms
 description: PaperCSS Forms
 ---
+Native selects receive the same PaperCSS treatment as other form controls, including a hand-drawn border, custom caret, hover, and focus states. Use `.input-block` for a full-width select. If your application renders its own icon, wrap the select with `.paper-select-wrapper` and place the icon element after the select.
+
 <div class="form-group">
   <label for="paperInputs1">Input</label>
   <input type="text" placeholder="Nice input" id="paperInputs1">
@@ -39,6 +41,26 @@ description: PaperCSS Forms
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
   </select>
+</div>
+<div class="form-group">
+  <label for="paperSelects2">Block Level Select</label>
+  <select class="input-block" id="paperSelects2">
+    <option value="draft">Draft</option>
+    <option value="published">Published</option>
+    <option value="archived">Archived</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="paperSelects3">Select with Custom Icon</label>
+  <span class="paper-select-wrapper">
+    <select class="paper-select" id="paperSelects3">
+      <option value="public">Public</option>
+      <option value="friends">Friends</option>
+    </select>
+    <svg class="paper-select-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6"></path>
+    </svg>
+  </span>
 </div>
 <fieldset class="form-group">
   <legend>Some Radio Buttons</legend>
@@ -214,6 +236,26 @@ description: PaperCSS Forms
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
   </select>
+</div>
+<div class="form-group">
+  <label for="paperSelects2">Block Level Select</label>
+  <select class="input-block" id="paperSelects2">
+    <option value="draft">Draft</option>
+    <option value="published">Published</option>
+    <option value="archived">Archived</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="paperSelects3">Select with Custom Icon</label>
+  <span class="paper-select-wrapper">
+    <select class="paper-select" id="paperSelects3">
+      <option value="public">Public</option>
+      <option value="friends">Friends</option>
+    </select>
+    <svg class="paper-select-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6"></path>
+    </svg>
+  </span>
 </div>
 <fieldset class="form-group">
   <legend>Some Radio Buttons</legend>
