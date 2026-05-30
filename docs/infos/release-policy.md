@@ -8,6 +8,8 @@ Run this checklist whenever a new tagged release is created for this fork.
 
 ## Required Updates
 
+- Confirm the root `README.md` fork notes include consumer-visible changes since
+  the previous release.
 - Update version references in `docs/content/_index.md` for NPM and CDN examples.
 - Verify `https://unpkg.com/papercss@<version>/dist/paper.css` and
   `https://unpkg.com/papercss@<version>/dist/paper.min.css` resolve.

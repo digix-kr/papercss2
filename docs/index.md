@@ -11,6 +11,18 @@ load every capsule by default.
 - If no capsule matches, inspect the code directly and add a concise capsule only when the finding is likely to matter again.
 - Update this index whenever a capsule is added, renamed, removed, or its scope changes.
 
+## Document Types In `docs/`
+
+- `docs/content/`, `docs/layouts/`, `docs/static/`, and `docs/config.toml` are
+  Hugo user documentation for PaperCSS components and the public docs site.
+- `docs/index.md` and `docs/infos/` are AI-agent development guides. They are
+  intentionally stored beside the Hugo docs because both describe this fork,
+  but they have a different audience and should stay operational.
+- `README.md` is the fork-facing entrypoint and change log for downstream
+  users. Consumer-visible fork changes should be recorded there first, with
+  `docs/infos/` updated only when agents need durable workflow or architecture
+  guidance for future work.
+
 ## Capsule Directory
 
 Capsules live in `docs/infos/`.
@@ -20,6 +32,7 @@ Current capsules:
 - `docs/infos/README.md`: Capsule writing rules and maintenance expectations.
 - `docs/infos/build-workflow.md`: CSS build outputs and command behavior.
 - `docs/infos/downstream-consumption.md`: Recommended way to consume this fork from another project during active development.
+- `docs/infos/fork-readme-maintenance.md`: README fork change-log ownership and update triggers.
 - `docs/infos/release-policy.md`: Release-time documentation update checklist for this fork.
 
 ## Project Map
@@ -48,6 +61,7 @@ Current capsules:
 Update `docs/infos/` and this index when:
 
 - A new build, release, import, or local development workflow is established.
+- A fork change should keep being recorded in `README.md` and agents need a repeatable rule for doing it.
 - Source organization changes in a way future agents should know.
 - A repeated agent mistake reveals a missing project rule.
 - A downstream integration pattern becomes the recommended way to consume this fork.

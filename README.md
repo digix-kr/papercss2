@@ -11,6 +11,7 @@
 ## Table of contents
 
 - [Table of contents](#table-of-contents)
+- [PaperCSS2 fork notes](#papercss2-fork-notes)
 - [Quick-start](#quick-start)
 - [Content of the framework](#content-of-the-framework)
 - [Documentation](#documentation)
@@ -19,6 +20,61 @@
 - [About](#about)
 - [Resources](#resources)
 - [Credits and license](#credits-and-license)
+
+## PaperCSS2 fork notes
+
+PaperCSS2 is a fork of [PaperCSS](https://github.com/papercss/papercss).
+The upstream README below is still useful for the base framework, but this
+section records fork-specific changes that downstream users and maintainers
+need to know.
+
+Current fork baseline:
+
+- Upstream base: `papercss/papercss` `master` at `b341c16`, package version `1.9.2`.
+- Fork remote: `digix-kr/papercss2`.
+- Embedded consumer: `meteorai-papercss` vendors this fork at
+  `imports/vendor/papercss2/` and imports the built CSS from `dist/paper.css`.
+
+Current fork usage:
+
+- Treat this fork as the source for generated PaperCSS2 CSS in downstream apps;
+  do not assume the upstream `papercss` npm package or CDN includes these
+  changes.
+- Downstream apps should import built CSS from `dist/paper.css`, not SCSS source
+  files.
+- After SCSS changes, rebuild with `npm run css:build` in this fork. From
+  `meteorai-papercss`, use `npm run build:papercss2`.
+
+Current fork changes:
+
+- Added AI-agent documentation entrypoints: `AGENTS.md`, `docs/index.md`, and
+  `docs/infos/`. These files guide development agents and are separate from
+  the Hugo documentation site under `docs/content/`.
+- Updated fork-owned documentation links and release guidance so fork docs point
+  at `digix-kr/papercss2` where ownership matters.
+- Added reusable PaperCSS form select treatment for native `select` controls,
+  including custom caret styling, hover/focus states, `.paper-select-wrapper`,
+  and `.paper-select-icon`.
+- Added reusable JavaScript-controlled dropdown styles: `.paper-dropdown`,
+  `.paper-dropdown-trigger`, `.paper-dropdown-menu`, `.paper-dropdown-item`,
+  `.paper-dropdown-open`, and `.paper-dropdown-item-selected` /
+  `aria-selected="true"` support.
+- Added a reusable hand-drawn text-link underline mixin and applied it to
+  content links while keeping `.paper-btn`, modal actions, and button-like links
+  free of text-link underline artwork.
+- Refined dropdown selected-item fill so active and hovered menu items keep an
+  inset, hand-drawn PaperCSS shape.
+
+Maintenance rule:
+
+- When a fork change affects downstream usage, available CSS classes,
+  generated CSS behavior, docs ownership, or release/installation workflow,
+  add a concise bullet to this section in the same change.
+- Keep `docs/index.md` and `docs/infos/` focused on agent-readable development
+  guidance. They can explain when to update this README, but they should not
+  replace this user-facing fork change log.
+- Keep Hugo user documentation under `docs/content/` focused on component usage
+  examples and site content.
 
 ## Quick-start
 

@@ -16,6 +16,8 @@ Keep always-loaded instructions short. Put project-specific details in
 
 - Maintain `docs/index.md` as the routing table for agent-readable capsules.
 - Maintain `docs/infos/` capsules when a change adds, removes, or meaningfully changes architecture, workflows, build steps, conventions, or known pitfalls.
+- Maintain the root `README.md` fork notes when a change affects downstream-visible CSS behavior, public classes, installation, release, or docs ownership.
+- Keep `docs/content/` for Hugo user documentation, and keep `docs/infos/` for agent-readable development guidance.
 - Keep capsules concise, concrete, and verifiable. Avoid generic coding advice.
 - Prefer adding links to exact files, commands, and ownership boundaries over prose summaries.
 - Do not duplicate README-style or generated site content unless it contains agent-critical guidance.
