@@ -1,0 +1,94 @@
+.paper-profile-card {
+  @include color('background-color', 'main-background');
+  display: grid;
+  gap: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.paper-profile-card-header {
+  @include color('background-color', 'white-dark-light-80');
+  @include color('border-bottom-color', 'muted-light');
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+}
+
+.paper-profile-card-kicker {
+  @include color('color', 'success-dark-10');
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.paper-profile-card-title {
+  @include color('color', 'primary');
+  font-size: 2.3rem;
+  line-height: 1.05;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.paper-profile-card-meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.85rem 1.25rem 0;
+}
+
+.paper-profile-card-meta span {
+  @include border-style(2);
+  @include color('background-color', 'white-dark');
+  @include color('border-color', 'muted-light');
+  @include color('color', 'muted-dark');
+  border-style: solid;
+  border-width: 1px;
+  display: inline-flex;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: 0.18rem 0.5rem;
+}
+
+.paper-profile-card-body {
+  margin: 0;
+  padding: 1.2rem 1.25rem;
+}
+
+.paper-profile-card-bio {
+  @include color('color', 'primary');
+  line-height: 1.35;
+  margin: 0;
+  max-width: 52rem;
+  overflow-wrap: anywhere;
+  padding: 0.85rem 1.25rem 1.2rem;
+}
+
+@include resp(xs) {
+  .paper-profile-card-header {
+    padding: 0.85rem 1rem;
+  }
+
+  .paper-profile-card-title {
+    font-size: 1.75rem;
+  }
+
+  .paper-profile-card-meta {
+    padding: 0.75rem 1rem 0;
+  }
+
+  .paper-profile-card-body {
+    padding: 1rem;
+  }
+
+  .paper-profile-card-bio {
+    padding: 0.75rem 1rem 1rem;
+  }
+}

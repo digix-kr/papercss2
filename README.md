@@ -62,6 +62,10 @@ Current fork changes:
 - Added a reusable hand-drawn text-link underline mixin and applied it to
   content links while keeping `.paper-btn`, modal actions, and button-like links
   free of text-link underline artwork.
+- Added reusable profile summary card styles: `.paper-profile-card`,
+  `.paper-profile-card-header`, `.paper-profile-card-kicker`,
+  `.paper-profile-card-title`, `.paper-profile-card-meta`,
+  `.paper-profile-card-body`, and `.paper-profile-card-bio`.
 - Refined dropdown selected-item fill so active and hovered menu items keep an
   inset, hand-drawn PaperCSS shape.
 

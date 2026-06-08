@@ -3205,6 +3205,112 @@ fieldset.form-group {
   border-right: 0;
 }
 
+.paper-profile-card {
+  background-color: #41403e;
+  background-color: var(--main-background);
+  display: grid;
+  gap: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.paper-profile-card-header {
+  background-color: #41403e;
+  background-color: var(--white-dark-light-80);
+  border-bottom-color: #41403e;
+  border-bottom-color: var(--muted-light);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+}
+
+.paper-profile-card-kicker {
+  color: #41403e;
+  color: var(--success-dark-10);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.paper-profile-card-title {
+  color: #41403e;
+  color: var(--primary);
+  font-size: 2.3rem;
+  line-height: 1.05;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.paper-profile-card-meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.85rem 1.25rem 0;
+}
+
+.paper-profile-card-meta span {
+  border-bottom-left-radius: 185px 25px;
+  border-bottom-right-radius: 20px 205px;
+  border-top-left-radius: 125px 25px;
+  border-top-right-radius: 10px 205px;
+  background-color: #41403e;
+  background-color: var(--white-dark);
+  border-color: #41403e;
+  border-color: var(--muted-light);
+  color: #41403e;
+  color: var(--muted-dark);
+  border-style: solid;
+  border-width: 1px;
+  display: inline-flex;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: 0.18rem 0.5rem;
+}
+
+.paper-profile-card-body {
+  margin: 0;
+  padding: 1.2rem 1.25rem;
+}
+
+.paper-profile-card-bio {
+  color: #41403e;
+  color: var(--primary);
+  line-height: 1.35;
+  margin: 0;
+  max-width: 52rem;
+  overflow-wrap: anywhere;
+  padding: 0.85rem 1.25rem 1.2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .paper-profile-card-header {
+    padding: 0.85rem 1rem;
+  }
+
+  .paper-profile-card-title {
+    font-size: 1.75rem;
+  }
+
+  .paper-profile-card-meta {
+    padding: 0.75rem 1rem 0;
+  }
+
+  .paper-profile-card-body {
+    padding: 1rem;
+  }
+
+  .paper-profile-card-bio {
+    padding: 0.75rem 1rem 1rem;
+  }
+}
 .tabs .content {
   display: none;
   flex-basis: 100%;
