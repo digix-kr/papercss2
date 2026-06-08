@@ -1708,18 +1708,15 @@ a {
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 2.85em 0.42em;
-  color: #41403e;
-  color: var(--secondary);
+  color: inherit;
   text-decoration: none;
 }
 a:visited {
-  color: #41403e;
-  color: var(--secondary);
+  color: inherit;
 }
 a:hover, a:focus-visible {
-  color: #41403e;
-  color: var(--primary);
   background-size: 2.85em 0.52em;
+  color: inherit;
 }
 a:focus-visible {
   outline: 2px dashed rgba(65, 64, 62, 0.7);
@@ -2693,23 +2690,20 @@ fieldset.form-group {
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 2.85em 0.42em;
-  color: #41403e;
-  color: var(--secondary);
+  color: inherit;
   cursor: pointer;
   text-decoration: none;
 }
 .modal .modal-link:visited,
 .modal a:visited {
-  color: #41403e;
-  color: var(--secondary);
+  color: inherit;
 }
 .modal .modal-link:hover, .modal .modal-link:focus, .modal .modal-link:focus-visible,
 .modal a:hover,
 .modal a:focus,
 .modal a:focus-visible {
-  color: #41403e;
-  color: var(--primary);
   background-size: 2.85em 0.52em;
+  color: inherit;
   text-decoration: none;
 }
 .modal .modal-link:focus-visible,

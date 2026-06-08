@@ -66,17 +66,17 @@ button,
 
 a {
   @include paper-link-underline();
-  @include color('color', 'secondary');
+  color: inherit;
   text-decoration: none;
 
   &:visited {
-    @include color('color', 'secondary');
+    color: inherit;
   }
 
   &:hover,
   &:focus-visible {
-    @include color('color', 'primary');
     background-size: 2.85em 0.52em;
+    color: inherit;
   }
 
   &:focus-visible {
