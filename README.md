@@ -68,6 +68,13 @@ Current fork changes:
   `.paper-profile-card-body`, and `.paper-profile-card-bio`.
 - Refined dropdown selected-item fill so active and hovered menu items keep an
   inset, hand-drawn PaperCSS shape.
+- Added hand-drawn dividers: a `.paper-divider` element, a `--paper-sketch-line`
+  custom property (so apps can draw their own separators without redrawing the
+  SVG), the `paper-sketch-line` / `paper-sketch-line-url` SCSS helpers, and a
+  compact `.border-soft` wobble (border style 7) for small boxes such as chips,
+  counters, and list notes.
+- Replaced the straight `.paper-profile-card-header` bottom border with the
+  hand-drawn sketch line so the header/body split reads as PaperCSS.
 
 Maintenance rule:
 

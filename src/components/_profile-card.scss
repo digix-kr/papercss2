@@ -8,12 +8,13 @@
 
 .paper-profile-card-header {
   @include color('background-color', 'white-dark-light-80');
-  @include color('border-bottom-color', 'muted-light');
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
+  // Hand-drawn divider between header and body, not a ruler-straight line.
+  @include paper-sketch-line($muted-light);
+  background-position: bottom center;
+  background-size: 3.4em 0.55em;
   display: grid;
   gap: 0.25rem;
-  padding: 1rem 1.25rem;
+  padding: 1rem 1.25rem 1.4rem;
 }
 
 .paper-profile-card-kicker {
@@ -73,7 +74,7 @@
 
 @include resp(xs) {
   .paper-profile-card-header {
-    padding: 0.85rem 1rem;
+    padding: 0.85rem 1rem 1.25rem;
   }
 
   .paper-profile-card-title {

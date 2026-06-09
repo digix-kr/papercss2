@@ -53,6 +53,14 @@
   border-style: dashed;
 }
 
+// Compact hand-drawn wobble for small boxes (chips, counters, list notes).
+// Sets only the radius, so it layers on either `.border` or an app's own
+// `border` declaration without forcing a width/color/style.
+.border-soft,
+.border-7 {
+  @include border-style(7);
+}
+
 .border-thick {
   border-width: 5px;
 }
