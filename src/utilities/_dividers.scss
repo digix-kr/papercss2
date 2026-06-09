@@ -2,17 +2,19 @@
   Hand-drawn dividers.
 
   PaperCSS's informal look comes from wobbly strokes, not ruler-straight lines.
-  `.paper-divider` is a sketchy horizontal rule, and `--paper-sketch-line`
-  exposes the same stroke as a custom property so downstream apps can reuse it
-  for their own separators (e.g. a section's top edge) without redrawing the SVG.
+  `.paper-divider` is a sketchy horizontal rule. `--paper-sketch-line` and
+  `--paper-sketch-line-faint` expose those strokes as custom properties so
+  downstream apps can reuse them for their own separators without redrawing SVGs.
 */
 
 html {
   --paper-sketch-line: #{paper-sketch-line-url($primary-light)};
+  --paper-sketch-line-faint: #{paper-sketch-line-faint-url($primary-light)};
 }
 
 html.dark {
   --paper-sketch-line: #{paper-sketch-line-url($dark-muted)};
+  --paper-sketch-line-faint: #{paper-sketch-line-faint-url($dark-muted)};
 }
 
 .paper-divider {
@@ -27,4 +29,10 @@ html.dark {
 // Tighter spacing variant for compact stacks (sidebars, list separators).
 .paper-divider-tight {
   margin: 0.5rem 0;
+}
+
+.paper-divider-faint {
+  @include paper-sketch-line-faint($primary-light);
+  height: 0.48rem;
+  margin: 0.45rem 0;
 }
