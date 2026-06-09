@@ -145,6 +145,7 @@
   @param color
   @default $primary-light
 */
+// stylelint-disable-next-line function-url-quotes
 @function paper-sketch-line-url($color: $primary-light) {
   $sketch-stroke: "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%2064%208'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M1%204%20C9%201.6%2013%206.4%2021%204%20C28%201.8%2033%206.2%2041%204%20C48%201.8%2053%206.4%2063%204'%20fill%3D'none'%20stroke%3D'#{$color}'%20stroke-opacity%3D'.55'%20stroke-width%3D'1.5'%20stroke-linecap%3D'round'/%3E%3Cpath%20d%3D'M3%205%20C10%206.3%2015%203.7%2023%205%20C30%206.2%2035%203.8%2043%205%20C49%206.1%2055%203.9%2062%205'%20fill%3D'none'%20stroke%3D'#{$color}'%20stroke-opacity%3D'.32'%20stroke-width%3D'.9'%20stroke-linecap%3D'round'/%3E%3C/svg%3E";
 

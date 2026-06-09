@@ -1,0 +1,27 @@
+/*
+  Text selection treatment.
+  Use preset classes on html/body or override the two custom properties directly.
+*/
+
+::selection {
+  background-color: $paper-selection-background;
+  background-color: var(--paper-selection-background);
+  color: $paper-selection-color;
+  color: var(--paper-selection-color);
+  text-shadow: none;
+}
+
+.paper-selection-paper-marker {
+  --paper-selection-background: var(--paper-selection-paper-marker-background);
+  --paper-selection-color: var(--paper-selection-paper-marker-color);
+}
+
+.paper-selection-blue-pencil {
+  --paper-selection-background: var(--paper-selection-blue-pencil-background);
+  --paper-selection-color: var(--paper-selection-blue-pencil-color);
+}
+
+.paper-selection-rose-correction {
+  --paper-selection-background: var(--paper-selection-rose-correction-background);
+  --paper-selection-color: var(--paper-selection-rose-correction-color);
+}

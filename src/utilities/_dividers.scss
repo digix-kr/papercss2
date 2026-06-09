@@ -17,11 +17,11 @@ html.dark {
 
 .paper-divider {
   @include paper-sketch-line($primary-light);
-  width: 100%;
+  background-color: transparent;
+  border: 0;
   height: 0.6rem;
   margin: 0.9rem 0;
-  border: 0;
-  background-color: transparent;
+  width: 100%;
 }
 
 // Tighter spacing variant for compact stacks (sidebars, list separators).

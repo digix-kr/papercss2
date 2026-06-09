@@ -75,6 +75,9 @@ Current fork changes:
   counters, and list notes.
 - Replaced the straight `.paper-profile-card-header` bottom border with the
   hand-drawn sketch line so the header/body split reads as PaperCSS.
+- Added PaperCSS2 text-selection highlights with CSS custom properties and
+  preset classes: `.paper-selection-paper-marker`,
+  `.paper-selection-blue-pencil`, and `.paper-selection-rose-correction`.
 
 Maintenance rule:
 

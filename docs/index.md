@@ -34,8 +34,9 @@ Current capsules:
 - `docs/infos/downstream-consumption.md`: Recommended way to consume this fork from another project during active development.
 - `docs/infos/fork-readme-maintenance.md`: README fork change-log ownership and update triggers.
 - `docs/infos/profile-card.md`: Profile summary card classes and intended usage.
-- `docs/infos/sketch-dividers.md`: Hand-drawn divider (`.paper-divider`, `--paper-sketch-line`) and compact `.border-soft` wobble.
 - `docs/infos/release-policy.md`: Release-time documentation update checklist for this fork.
+- `docs/infos/selection-highlights.md`: Text-selection CSS variables, preset classes, and dark-mode maintenance notes.
+- `docs/infos/sketch-dividers.md`: Hand-drawn divider (`.paper-divider`, `--paper-sketch-line`) and compact `.border-soft` wobble.
 
 ## Project Map
 
@@ -46,6 +47,7 @@ Current capsules:
 - `src/components/_profile-card.scss`: Profile summary card component for feed/profile home headers.
 - `src/layout/`: Layout helpers such as container and flexbox.
 - `src/utilities/`: Border, divider (hand-drawn separators), and shadow utilities.
+- `src/utilities/_selection.scss`: PaperCSS2 text-selection highlight defaults and preset classes.
 - `build/build.js`: CSS build script that compiles SCSS, runs autoprefixer/cssnano, and writes `dist/paper.css`, `dist/paper.min.css`, and docs CSS.
 - `build/hot-reload.js`: Development watcher for docs CSS, not the main `dist/` output.
 - `dist/`: Built CSS artifacts consumed by downstream projects.
