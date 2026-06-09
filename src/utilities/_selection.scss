@@ -4,8 +4,8 @@
 */
 
 ::selection {
-  background-color: $paper-selection-background;
-  background-color: var(--paper-selection-background);
+  background-color: $paper-selection-native-background;
+  background-color: var(--paper-selection-native-background);
   color: $paper-selection-color;
   color: var(--paper-selection-color);
   text-shadow: none;
@@ -13,15 +13,95 @@
 
 .paper-selection-paper-marker {
   --paper-selection-background: var(--paper-selection-paper-marker-background);
+  --paper-selection-brush-native-background: var(--paper-selection-paper-marker-brush-background);
   --paper-selection-color: var(--paper-selection-paper-marker-color);
+  --paper-selection-native-background: var(--paper-selection-paper-marker-background);
 }
 
 .paper-selection-blue-pencil {
   --paper-selection-background: var(--paper-selection-blue-pencil-background);
+  --paper-selection-brush-native-background: var(--paper-selection-blue-pencil-brush-background);
   --paper-selection-color: var(--paper-selection-blue-pencil-color);
+  --paper-selection-native-background: var(--paper-selection-blue-pencil-background);
 }
 
 .paper-selection-rose-correction {
   --paper-selection-background: var(--paper-selection-rose-correction-background);
+  --paper-selection-brush-native-background: var(--paper-selection-rose-correction-brush-background);
   --paper-selection-color: var(--paper-selection-rose-correction-color);
+  --paper-selection-native-background: var(--paper-selection-rose-correction-background);
+}
+
+.paper-selection-brushed {
+  --paper-selection-native-background: var(--paper-selection-brush-native-background);
+}
+
+.paper-selection-brush-layer {
+  contain: layout style paint;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 2147483000;
+}
+
+.paper-selection-brush-mark {
+  background-color: var(--paper-selection-background);
+  background-image:
+    linear-gradient(177deg, rgba(#fff, 0.22) 0 18%, transparent 19% 64%, rgba(#000, 0.06) 65% 100%),
+    repeating-linear-gradient(2deg, transparent 0 0.32em, rgba(#fff, 0.16) 0.36em 0.42em, transparent 0.48em 0.72em);
+  border-bottom-left-radius: 30% 65%;
+  border-bottom-right-radius: 9% 48%;
+  border-top-left-radius: 16% 45%;
+  border-top-right-radius: 36% 72%;
+  box-shadow:
+    inset 0 0.08em 0 rgba(#fff, 0.18),
+    inset 0 -0.12em 0 rgba(#000, 0.05);
+  clip-path: polygon(0 22%, 4% 10%, 16% 16%, 31% 8%, 47% 14%, 63% 9%, 79% 15%, 96% 8%, 100% 20%, 98% 83%, 82% 90%, 65% 84%, 49% 93%, 32% 86%, 17% 91%, 3% 82%);
+  display: block;
+  height: var(--paper-selection-brush-height, 1em);
+  left: var(--paper-selection-brush-left, 0);
+  mix-blend-mode: multiply;
+  opacity: var(--paper-selection-brush-opacity);
+  position: absolute;
+  top: var(--paper-selection-brush-top, 0);
+  transform: translateY(var(--paper-selection-brush-offset-y, 0)) rotate(var(--paper-selection-brush-rotate, -0.35deg)) skewX(var(--paper-selection-brush-skew, 0deg));
+  transform-origin: left center;
+  width: var(--paper-selection-brush-width, 0);
+  will-change: left, top, width, height, transform;
+}
+
+.paper-selection-brush-mark::before,
+.paper-selection-brush-mark::after {
+  background: rgba(#fff, 0.2);
+  border-radius: inherit;
+  content: '';
+  height: 18%;
+  left: -1.5%;
+  opacity: 0.65;
+  position: absolute;
+  right: -1.5%;
+  top: 22%;
+  transform: rotate(var(--paper-selection-brush-grain-rotate, 0.45deg));
+}
+
+.paper-selection-brush-mark::after {
+  background: rgba(#000, 0.06);
+  height: 16%;
+  opacity: 0.38;
+  top: 64%;
+  transform: rotate(calc(var(--paper-selection-brush-grain-rotate, 0.45deg) * -1));
+}
+
+.paper-selection-brush-mark:nth-child(2n) {
+  --paper-selection-brush-grain-rotate: -0.35deg;
+}
+
+.paper-selection-brush-mark:nth-child(3n) {
+  --paper-selection-brush-grain-rotate: 0.2deg;
+}
+
+html.dark .paper-selection-brush-mark {
+  mix-blend-mode: screen;
 }

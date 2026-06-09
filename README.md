@@ -78,6 +78,9 @@ Current fork changes:
 - Added PaperCSS2 text-selection highlights with CSS custom properties and
   preset classes: `.paper-selection-paper-marker`,
   `.paper-selection-blue-pencil`, and `.paper-selection-rose-correction`.
+- Added brushed text-selection overlay classes (`.paper-selection-brushed`,
+  `.paper-selection-brush-layer`, `.paper-selection-brush-mark`) so downstream
+  apps can render hand-painted highlighter edges over native selection rects.
 
 Maintenance rule:
 

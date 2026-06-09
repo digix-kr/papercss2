@@ -72,12 +72,18 @@ $primary-inverse: #fff !default;
 
 $paper-selection-paper-marker-background: #fff0a8 !default;
 $paper-selection-paper-marker-color: #2f2924 !default;
+$paper-selection-paper-marker-brush-background: rgba(#fff0a8, 0.32) !default;
 $paper-selection-blue-pencil-background: #cbefff !default;
 $paper-selection-blue-pencil-color: #1f526b !default;
+$paper-selection-blue-pencil-brush-background: rgba(#cbefff, 0.32) !default;
 $paper-selection-rose-correction-background: #ffd8d0 !default;
 $paper-selection-rose-correction-color: #7f2722 !default;
+$paper-selection-rose-correction-brush-background: rgba(#ffd8d0, 0.34) !default;
 $paper-selection-background: $paper-selection-paper-marker-background !default;
 $paper-selection-color: $paper-selection-paper-marker-color !default;
+$paper-selection-native-background: $paper-selection-background !default;
+$paper-selection-brush-native-background: $paper-selection-paper-marker-brush-background !default;
+$paper-selection-brush-opacity: 0.76 !default;
 
 
 // Set dark theme colors
@@ -143,12 +149,18 @@ $dark-primary-inverse: $primary !default;
 
 $dark-paper-selection-paper-marker-background: rgba(#f6d865, 0.5) !default;
 $dark-paper-selection-paper-marker-color: #fffbe7 !default;
+$dark-paper-selection-paper-marker-brush-background: rgba(#f6d865, 0.2) !default;
 $dark-paper-selection-blue-pencil-background: rgba(#61b7d9, 0.42) !default;
 $dark-paper-selection-blue-pencil-color: #f2fbff !default;
+$dark-paper-selection-blue-pencil-brush-background: rgba(#61b7d9, 0.2) !default;
 $dark-paper-selection-rose-correction-background: rgba(#df6b64, 0.45) !default;
 $dark-paper-selection-rose-correction-color: #fff4f1 !default;
+$dark-paper-selection-rose-correction-brush-background: rgba(#df6b64, 0.22) !default;
 $dark-paper-selection-background: $dark-paper-selection-paper-marker-background !default;
 $dark-paper-selection-color: $dark-paper-selection-paper-marker-color !default;
+$dark-paper-selection-native-background: $dark-paper-selection-background !default;
+$dark-paper-selection-brush-native-background: $dark-paper-selection-paper-marker-brush-background !default;
+$dark-paper-selection-brush-opacity: 0.7 !default;
 
 
 
@@ -204,12 +216,18 @@ $theme-map: (
     primary-inverse: $primary-inverse,
     paper-selection-background: $paper-selection-background,
     paper-selection-color: $paper-selection-color,
+    paper-selection-native-background: $paper-selection-native-background,
+    paper-selection-brush-native-background: $paper-selection-brush-native-background,
+    paper-selection-brush-opacity: $paper-selection-brush-opacity,
     paper-selection-paper-marker-background: $paper-selection-paper-marker-background,
     paper-selection-paper-marker-color: $paper-selection-paper-marker-color,
+    paper-selection-paper-marker-brush-background: $paper-selection-paper-marker-brush-background,
     paper-selection-blue-pencil-background: $paper-selection-blue-pencil-background,
     paper-selection-blue-pencil-color: $paper-selection-blue-pencil-color,
+    paper-selection-blue-pencil-brush-background: $paper-selection-blue-pencil-brush-background,
     paper-selection-rose-correction-background: $paper-selection-rose-correction-background,
     paper-selection-rose-correction-color: $paper-selection-rose-correction-color,
+    paper-selection-rose-correction-brush-background: $paper-selection-rose-correction-brush-background,
   ),
   dark: (
     primary: $dark-primary,
@@ -262,12 +280,18 @@ $theme-map: (
     primary-inverse: $dark-primary-inverse,
     paper-selection-background: $dark-paper-selection-background,
     paper-selection-color: $dark-paper-selection-color,
+    paper-selection-native-background: $dark-paper-selection-native-background,
+    paper-selection-brush-native-background: $dark-paper-selection-brush-native-background,
+    paper-selection-brush-opacity: $dark-paper-selection-brush-opacity,
     paper-selection-paper-marker-background: $dark-paper-selection-paper-marker-background,
     paper-selection-paper-marker-color: $dark-paper-selection-paper-marker-color,
+    paper-selection-paper-marker-brush-background: $dark-paper-selection-paper-marker-brush-background,
     paper-selection-blue-pencil-background: $dark-paper-selection-blue-pencil-background,
     paper-selection-blue-pencil-color: $dark-paper-selection-blue-pencil-color,
+    paper-selection-blue-pencil-brush-background: $dark-paper-selection-blue-pencil-brush-background,
     paper-selection-rose-correction-background: $dark-paper-selection-rose-correction-background,
     paper-selection-rose-correction-color: $dark-paper-selection-rose-correction-color,
+    paper-selection-rose-correction-brush-background: $dark-paper-selection-rose-correction-brush-background,
   )
 );
 

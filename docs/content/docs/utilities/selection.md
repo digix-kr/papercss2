@@ -42,3 +42,31 @@ Available preset tokens:
 - `--paper-selection-blue-pencil-color`
 - `--paper-selection-rose-correction-background`
 - `--paper-selection-rose-correction-color`
+
+### Brushed marker overlay
+
+Native `::selection` is painted by the browser and only accepts a small set of
+styles, so it cannot draw wobbly marker edges by itself. For a hand-painted
+selection, add `.paper-selection-brushed` and render selection rectangles with
+PaperCSS2's overlay classes:
+
+```html
+<html class="paper-selection-paper-marker paper-selection-brushed">
+  <div class="paper-selection-brush-layer" aria-hidden="true">
+    <span
+      class="paper-selection-brush-mark"
+      style="
+        --paper-selection-brush-left: 10px;
+        --paper-selection-brush-top: 20px;
+        --paper-selection-brush-width: 140px;
+        --paper-selection-brush-height: 18px;
+        --paper-selection-brush-rotate: -0.6deg;
+      "
+    ></span>
+  </div>
+</html>
+```
+
+The overlay mark uses the active preset's `--paper-selection-background`, so
+switching from Paper Marker to Blue Pencil or Rose Correction changes both the
+native fallback and the brushed overlay.
