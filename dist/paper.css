@@ -234,7 +234,20 @@ html.dark {
   @default $primary-light
 */
 /*
+  Vertical sibling of the sketch stroke (a wavy top-to-bottom line). Used for
+  hand-drawn quote/blockquote bars so a shared post's left rule reads as
+  PaperCSS instead of a ruler-straight `border-left`.
+  @param color
+  @default $primary-light
+*/
+/*
   Apply the hand-drawn divider stroke as a repeating horizontal background.
+  @param color
+  @default $primary-light
+*/
+/*
+  Apply the hand-drawn stroke as a repeating vertical bar pinned to the left
+  edge (the quote-bar treatment).
   @param color
   @default $primary-light
 */
@@ -1310,18 +1323,21 @@ table.table-alternating tbody tr:nth-of-type(even) {
   Hand-drawn dividers.
 
   PaperCSS's informal look comes from wobbly strokes, not ruler-straight lines.
-  `.paper-divider` is a sketchy horizontal rule. `--paper-sketch-line` and
-  `--paper-sketch-line-faint` expose those strokes as custom properties so
-  downstream apps can reuse them for their own separators without redrawing SVGs.
+  `.paper-divider` is a sketchy horizontal rule. `--paper-sketch-line`,
+  `--paper-sketch-line-faint`, and `--paper-sketch-line-vertical` expose those
+  strokes as custom properties so downstream apps can reuse them for their own
+  separators and quote bars without redrawing SVGs.
 */
 html {
   --paper-sketch-line: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%2064%208'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M1%204%20C9%201.6%2013%206.4%2021%204%20C28%201.8%2033%206.2%2041%204%20C48%201.8%2053%206.4%2063%204'%20fill%3D'none'%20stroke%3D'%23cdcccb'%20stroke-opacity%3D'.55'%20stroke-width%3D'1.5'%20stroke-linecap%3D'round'/%3E%3Cpath%20d%3D'M3%205%20C10%206.3%2015%203.7%2023%205%20C30%206.2%2035%203.8%2043%205%20C49%206.1%2055%203.9%2062%205'%20fill%3D'none'%20stroke%3D'%23cdcccb'%20stroke-opacity%3D'.32'%20stroke-width%3D'.9'%20stroke-linecap%3D'round'/%3E%3C/svg%3E");
   --paper-sketch-line-faint: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%2064%208'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M1%204%20C9%201.8%2013%206.2%2021%204%20C28%202%2033%206%2041%204%20C48%202%2053%206.1%2063%204'%20fill%3D'none'%20stroke%3D'%23cdcccb'%20stroke-opacity%3D'.28'%20stroke-width%3D'1.05'%20stroke-linecap%3D'round'/%3E%3Cpath%20d%3D'M3%205%20C10%206.1%2015%203.9%2023%205%20C30%206%2035%204%2043%205%20C49%206%2055%204%2062%205'%20fill%3D'none'%20stroke%3D'%23cdcccb'%20stroke-opacity%3D'.16'%20stroke-width%3D'.65'%20stroke-linecap%3D'round'/%3E%3C/svg%3E");
+  --paper-sketch-line-vertical: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%208%2064'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M4%201%20C1.6%209%206.4%2013%204%2021%20C1.8%2028%206.2%2033%204%2041%20C1.8%2048%206.4%2053%204%2063'%20fill%3D'none'%20stroke%3D'%23cdcccb'%20stroke-opacity%3D'.55'%20stroke-width%3D'1.5'%20stroke-linecap%3D'round'/%3E%3Cpath%20d%3D'M5%203%20C6.3%2010%203.7%2015%205%2023%20C6.2%2030%203.8%2035%205%2043%20C6.1%2049%203.9%2055%205%2062'%20fill%3D'none'%20stroke%3D'%23cdcccb'%20stroke-opacity%3D'.32'%20stroke-width%3D'.9'%20stroke-linecap%3D'round'/%3E%3C/svg%3E");
 }
 
 html.dark {
   --paper-sketch-line: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%2064%208'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M1%204%20C9%201.6%2013%206.4%2021%204%20C28%201.8%2033%206.2%2041%204%20C48%201.8%2053%206.4%2063%204'%20fill%3D'none'%20stroke%3D'%23868e96'%20stroke-opacity%3D'.55'%20stroke-width%3D'1.5'%20stroke-linecap%3D'round'/%3E%3Cpath%20d%3D'M3%205%20C10%206.3%2015%203.7%2023%205%20C30%206.2%2035%203.8%2043%205%20C49%206.1%2055%203.9%2062%205'%20fill%3D'none'%20stroke%3D'%23868e96'%20stroke-opacity%3D'.32'%20stroke-width%3D'.9'%20stroke-linecap%3D'round'/%3E%3C/svg%3E");
   --paper-sketch-line-faint: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%2064%208'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M1%204%20C9%201.8%2013%206.2%2021%204%20C28%202%2033%206%2041%204%20C48%202%2053%206.1%2063%204'%20fill%3D'none'%20stroke%3D'%23868e96'%20stroke-opacity%3D'.28'%20stroke-width%3D'1.05'%20stroke-linecap%3D'round'/%3E%3Cpath%20d%3D'M3%205%20C10%206.1%2015%203.9%2023%205%20C30%206%2035%204%2043%205%20C49%206%2055%204%2062%205'%20fill%3D'none'%20stroke%3D'%23868e96'%20stroke-opacity%3D'.16'%20stroke-width%3D'.65'%20stroke-linecap%3D'round'/%3E%3C/svg%3E");
+  --paper-sketch-line-vertical: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%208%2064'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M4%201%20C1.6%209%206.4%2013%204%2021%20C1.8%2028%206.2%2033%204%2041%20C1.8%2048%206.4%2053%204%2063'%20fill%3D'none'%20stroke%3D'%23868e96'%20stroke-opacity%3D'.55'%20stroke-width%3D'1.5'%20stroke-linecap%3D'round'/%3E%3Cpath%20d%3D'M5%203%20C6.3%2010%203.7%2015%205%2023%20C6.2%2030%203.8%2035%205%2043%20C6.1%2049%203.9%2055%205%2062'%20fill%3D'none'%20stroke%3D'%23868e96'%20stroke-opacity%3D'.32'%20stroke-width%3D'.9'%20stroke-linecap%3D'round'/%3E%3C/svg%3E");
 }
 
 .paper-divider {
@@ -1347,6 +1363,14 @@ html.dark {
   background-size: 3.4em 0.48em;
   height: 0.48rem;
   margin: 0.45rem 0;
+}
+
+.paper-quote {
+  background-image: var(--paper-sketch-line-vertical);
+  background-position: left center;
+  background-repeat: repeat-y;
+  background-size: 0.55em 2.6em;
+  padding-left: 0.9rem;
 }
 
 /*

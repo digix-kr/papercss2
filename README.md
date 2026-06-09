@@ -82,6 +82,11 @@ Current fork changes:
   `.paper-selection-brush-layer`, `.paper-selection-brush-mark`) so downstream
   apps can render hand-painted highlighter edges without showing the native
   rectangular selection fill.
+- Added a hand-drawn quote bar: a `.paper-quote` class, a
+  `--paper-sketch-line-vertical` custom property, and the
+  `paper-sketch-line-vertical` / `paper-sketch-line-vertical-url` SCSS helpers,
+  so quoted/shared content uses a wavy vertical stroke on its left edge instead
+  of a ruler-straight `border-left`.
 
 Maintenance rule:
 

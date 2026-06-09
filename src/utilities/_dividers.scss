@@ -2,19 +2,22 @@
   Hand-drawn dividers.
 
   PaperCSS's informal look comes from wobbly strokes, not ruler-straight lines.
-  `.paper-divider` is a sketchy horizontal rule. `--paper-sketch-line` and
-  `--paper-sketch-line-faint` expose those strokes as custom properties so
-  downstream apps can reuse them for their own separators without redrawing SVGs.
+  `.paper-divider` is a sketchy horizontal rule. `--paper-sketch-line`,
+  `--paper-sketch-line-faint`, and `--paper-sketch-line-vertical` expose those
+  strokes as custom properties so downstream apps can reuse them for their own
+  separators and quote bars without redrawing SVGs.
 */
 
 html {
   --paper-sketch-line: #{paper-sketch-line-url($primary-light)};
   --paper-sketch-line-faint: #{paper-sketch-line-faint-url($primary-light)};
+  --paper-sketch-line-vertical: #{paper-sketch-line-vertical-url($primary-light)};
 }
 
 html.dark {
   --paper-sketch-line: #{paper-sketch-line-url($dark-muted)};
   --paper-sketch-line-faint: #{paper-sketch-line-faint-url($dark-muted)};
+  --paper-sketch-line-vertical: #{paper-sketch-line-vertical-url($dark-muted)};
 }
 
 .paper-divider {
@@ -35,4 +38,15 @@ html.dark {
   @include paper-sketch-line-faint($primary-light);
   height: 0.48rem;
   margin: 0.45rem 0;
+}
+
+// Hand-drawn quote bar: a wavy vertical stroke pinned to the left edge, the
+// PaperCSS replacement for a `border-left` on quoted/shared content. Uses the
+// theme-aware custom property so it follows light/dark automatically.
+.paper-quote {
+  background-image: var(--paper-sketch-line-vertical);
+  background-position: left center;
+  background-repeat: repeat-y;
+  background-size: 0.55em 2.6em;
+  padding-left: 0.9rem;
 }

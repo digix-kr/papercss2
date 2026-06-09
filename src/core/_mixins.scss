@@ -160,6 +160,20 @@
 }
 
 /*
+  Vertical sibling of the sketch stroke (a wavy top-to-bottom line). Used for
+  hand-drawn quote/blockquote bars so a shared post's left rule reads as
+  PaperCSS instead of a ruler-straight `border-left`.
+  @param color
+  @default $primary-light
+*/
+// stylelint-disable-next-line function-url-quotes
+@function paper-sketch-line-vertical-url($color: $primary-light) {
+  $sketch-stroke: "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%208%2064'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M4%201%20C1.6%209%206.4%2013%204%2021%20C1.8%2028%206.2%2033%204%2041%20C1.8%2048%206.4%2053%204%2063'%20fill%3D'none'%20stroke%3D'#{$color}'%20stroke-opacity%3D'.55'%20stroke-width%3D'1.5'%20stroke-linecap%3D'round'/%3E%3Cpath%20d%3D'M5%203%20C6.3%2010%203.7%2015%205%2023%20C6.2%2030%203.8%2035%205%2043%20C6.1%2049%203.9%2055%205%2062'%20fill%3D'none'%20stroke%3D'#{$color}'%20stroke-opacity%3D'.32'%20stroke-width%3D'.9'%20stroke-linecap%3D'round'/%3E%3C/svg%3E";
+
+  @return url('#{str-replace($sketch-stroke, "#", "%23")}');
+}
+
+/*
   Apply the hand-drawn divider stroke as a repeating horizontal background.
   @param color
   @default $primary-light
@@ -176,6 +190,19 @@
   background-position: center;
   background-repeat: repeat-x;
   background-size: 3.4em 0.48em;
+}
+
+/*
+  Apply the hand-drawn stroke as a repeating vertical bar pinned to the left
+  edge (the quote-bar treatment).
+  @param color
+  @default $primary-light
+*/
+@mixin paper-sketch-line-vertical($color: $primary-light) {
+  background-image: paper-sketch-line-vertical-url($color);
+  background-position: left center;
+  background-repeat: repeat-y;
+  background-size: 0.55em 2.6em;
 }
 
 /**
