@@ -47,8 +47,8 @@ Available preset tokens:
 
 Native `::selection` is painted by the browser and only accepts a small set of
 styles, so it cannot draw wobbly marker edges by itself. For a hand-painted
-selection, add `.paper-selection-brushed` and render selection rectangles with
-PaperCSS2's overlay classes:
+selection, add `.paper-selection-brushed` to make the native rectangular fill
+transparent, then render selection rectangles with PaperCSS2's overlay classes:
 
 ```html
 <html class="paper-selection-paper-marker paper-selection-brushed">

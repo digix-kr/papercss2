@@ -9,8 +9,8 @@ PaperCSS2 owns the browser text-selection treatment through
   `--paper-selection-color`.
 - Preset classes are `.paper-selection-paper-marker`,
   `.paper-selection-blue-pencil`, and `.paper-selection-rose-correction`.
-- `.paper-selection-brushed` lowers the native rectangular selection fill and
-  expects an app/runtime to render `.paper-selection-brush-layer` with
+- `.paper-selection-brushed` makes the native rectangular selection fill
+  transparent and expects an app/runtime to render `.paper-selection-brush-layer` with
   `.paper-selection-brush-mark` children over the selected text rects.
 - Apply preset classes to `html`, `body`, or a scoped container. The global
   `::selection` rule reads inherited custom properties, so scoped containers

@@ -13,27 +13,24 @@
 
 .paper-selection-paper-marker {
   --paper-selection-background: var(--paper-selection-paper-marker-background);
-  --paper-selection-brush-native-background: var(--paper-selection-paper-marker-brush-background);
   --paper-selection-color: var(--paper-selection-paper-marker-color);
   --paper-selection-native-background: var(--paper-selection-paper-marker-background);
 }
 
 .paper-selection-blue-pencil {
   --paper-selection-background: var(--paper-selection-blue-pencil-background);
-  --paper-selection-brush-native-background: var(--paper-selection-blue-pencil-brush-background);
   --paper-selection-color: var(--paper-selection-blue-pencil-color);
   --paper-selection-native-background: var(--paper-selection-blue-pencil-background);
 }
 
 .paper-selection-rose-correction {
   --paper-selection-background: var(--paper-selection-rose-correction-background);
-  --paper-selection-brush-native-background: var(--paper-selection-rose-correction-brush-background);
   --paper-selection-color: var(--paper-selection-rose-correction-color);
   --paper-selection-native-background: var(--paper-selection-rose-correction-background);
 }
 
 .paper-selection-brushed {
-  --paper-selection-native-background: var(--paper-selection-brush-native-background);
+  --paper-selection-native-background: transparent;
 }
 
 .paper-selection-brush-layer {

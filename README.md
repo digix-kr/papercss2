@@ -80,7 +80,8 @@ Current fork changes:
   `.paper-selection-blue-pencil`, and `.paper-selection-rose-correction`.
 - Added brushed text-selection overlay classes (`.paper-selection-brushed`,
   `.paper-selection-brush-layer`, `.paper-selection-brush-mark`) so downstream
-  apps can render hand-painted highlighter edges over native selection rects.
+  apps can render hand-painted highlighter edges without showing the native
+  rectangular selection fill.
 
 Maintenance rule:
 

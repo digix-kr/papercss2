@@ -56,17 +56,13 @@ html {
   --paper-selection-background: #fff0a8;
   --paper-selection-color: #2f2924;
   --paper-selection-native-background: #fff0a8;
-  --paper-selection-brush-native-background: rgba(255, 240, 168, 0.32);
   --paper-selection-brush-opacity: 0.76;
   --paper-selection-paper-marker-background: #fff0a8;
   --paper-selection-paper-marker-color: #2f2924;
-  --paper-selection-paper-marker-brush-background: rgba(255, 240, 168, 0.32);
   --paper-selection-blue-pencil-background: #cbefff;
   --paper-selection-blue-pencil-color: #1f526b;
-  --paper-selection-blue-pencil-brush-background: rgba(203, 239, 255, 0.32);
   --paper-selection-rose-correction-background: #ffd8d0;
   --paper-selection-rose-correction-color: #7f2722;
-  --paper-selection-rose-correction-brush-background: rgba(255, 216, 208, 0.34);
 }
 
 html.dark {
@@ -121,17 +117,13 @@ html.dark {
   --paper-selection-background: rgba(246, 216, 101, 0.5);
   --paper-selection-color: #fffbe7;
   --paper-selection-native-background: rgba(246, 216, 101, 0.5);
-  --paper-selection-brush-native-background: rgba(246, 216, 101, 0.2);
   --paper-selection-brush-opacity: 0.7;
   --paper-selection-paper-marker-background: rgba(246, 216, 101, 0.5);
   --paper-selection-paper-marker-color: #fffbe7;
-  --paper-selection-paper-marker-brush-background: rgba(246, 216, 101, 0.2);
   --paper-selection-blue-pencil-background: rgba(97, 183, 217, 0.42);
   --paper-selection-blue-pencil-color: #f2fbff;
-  --paper-selection-blue-pencil-brush-background: rgba(97, 183, 217, 0.2);
   --paper-selection-rose-correction-background: rgba(223, 107, 100, 0.45);
   --paper-selection-rose-correction-color: #fff4f1;
-  --paper-selection-rose-correction-brush-background: rgba(223, 107, 100, 0.22);
 }
 
 /* stylelint-disable */
@@ -1367,27 +1359,24 @@ html.dark {
 
 .paper-selection-paper-marker {
   --paper-selection-background: var(--paper-selection-paper-marker-background);
-  --paper-selection-brush-native-background: var(--paper-selection-paper-marker-brush-background);
   --paper-selection-color: var(--paper-selection-paper-marker-color);
   --paper-selection-native-background: var(--paper-selection-paper-marker-background);
 }
 
 .paper-selection-blue-pencil {
   --paper-selection-background: var(--paper-selection-blue-pencil-background);
-  --paper-selection-brush-native-background: var(--paper-selection-blue-pencil-brush-background);
   --paper-selection-color: var(--paper-selection-blue-pencil-color);
   --paper-selection-native-background: var(--paper-selection-blue-pencil-background);
 }
 
 .paper-selection-rose-correction {
   --paper-selection-background: var(--paper-selection-rose-correction-background);
-  --paper-selection-brush-native-background: var(--paper-selection-rose-correction-brush-background);
   --paper-selection-color: var(--paper-selection-rose-correction-color);
   --paper-selection-native-background: var(--paper-selection-rose-correction-background);
 }
 
 .paper-selection-brushed {
-  --paper-selection-native-background: var(--paper-selection-brush-native-background);
+  --paper-selection-native-background: transparent;
 }
 
 .paper-selection-brush-layer {
