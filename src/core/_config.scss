@@ -84,6 +84,12 @@ $paper-selection-brush-height-scale: 0.9 !default;
 $paper-selection-brush-min-height: 10px !default;
 $paper-selection-brush-horizontal-bleed: 3px !default;
 
+$paper-note-lines-color: #8c8174 !default;
+$paper-note-lines-opacity: 0.2 !default;
+$paper-note-lines-gap: 2.35rem !default;
+$paper-note-lines-offset-y: 1.45rem !default;
+$paper-note-lines-background-size: 18rem $paper-note-lines-gap !default;
+
 $paper-theme-postit-body-background: #fff7bd !default;
 $paper-theme-postit-shell-background: linear-gradient(180deg, rgba(#fffbd6, 0.92), rgba(#fff2a5, 0.9)),
   #fff7bd !default;
@@ -176,6 +182,12 @@ $dark-paper-selection-brush-height-scale: $paper-selection-brush-height-scale !d
 $dark-paper-selection-brush-min-height: $paper-selection-brush-min-height !default;
 $dark-paper-selection-brush-horizontal-bleed: $paper-selection-brush-horizontal-bleed !default;
 
+$dark-paper-note-lines-color: #f2e6c8 !default;
+$dark-paper-note-lines-opacity: 0.12 !default;
+$dark-paper-note-lines-gap: $paper-note-lines-gap !default;
+$dark-paper-note-lines-offset-y: $paper-note-lines-offset-y !default;
+$dark-paper-note-lines-background-size: $paper-note-lines-background-size !default;
+
 
 
 $theme-map: (
@@ -241,6 +253,11 @@ $theme-map: (
     paper-selection-blue-pencil-color: $paper-selection-blue-pencil-color,
     paper-selection-rose-correction-background: $paper-selection-rose-correction-background,
     paper-selection-rose-correction-color: $paper-selection-rose-correction-color,
+    paper-note-lines-color: $paper-note-lines-color,
+    paper-note-lines-opacity: $paper-note-lines-opacity,
+    paper-note-lines-gap: $paper-note-lines-gap,
+    paper-note-lines-offset-y: $paper-note-lines-offset-y,
+    paper-note-lines-background-size: $paper-note-lines-background-size,
     paper-theme-postit-body-background: $paper-theme-postit-body-background,
     paper-theme-postit-shell-background: $paper-theme-postit-shell-background,
     paper-theme-postit-header-background: $paper-theme-postit-header-background,
@@ -318,6 +335,11 @@ $theme-map: (
     paper-selection-blue-pencil-color: $dark-paper-selection-blue-pencil-color,
     paper-selection-rose-correction-background: $dark-paper-selection-rose-correction-background,
     paper-selection-rose-correction-color: $dark-paper-selection-rose-correction-color,
+    paper-note-lines-color: $dark-paper-note-lines-color,
+    paper-note-lines-opacity: $dark-paper-note-lines-opacity,
+    paper-note-lines-gap: $dark-paper-note-lines-gap,
+    paper-note-lines-offset-y: $dark-paper-note-lines-offset-y,
+    paper-note-lines-background-size: $dark-paper-note-lines-background-size,
   )
 );
 

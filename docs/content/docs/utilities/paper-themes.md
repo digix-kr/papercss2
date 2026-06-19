@@ -43,3 +43,32 @@ Available Post-it tokens:
 
 Override the SCSS variables in `src/core/_config.scss` before building, or set
 the CSS custom properties downstream for product-specific palettes.
+
+### Note-line background
+
+Use `.paper-note-lines` on an outer page shell when you want a subtle notebook
+rule behind the content:
+
+```html
+<main class="paper-note-lines">
+```
+
+The utility adds only the repeating paper line image. Keep cards, menus, feeds,
+and other raised surfaces on their own solid backgrounds so the notebook rule
+stays in the back layer.
+
+Available note-line tokens:
+
+- `--paper-note-lines-background-image`
+- `--paper-note-lines-background-position`
+- `--paper-note-lines-background-size`
+- `--paper-note-lines-color`
+- `--paper-note-lines-opacity`
+- `--paper-note-lines-gap`
+- `--paper-note-lines-offset-y`
+
+Change `--paper-note-lines-background-size` and
+`--paper-note-lines-background-position` at runtime for spacing and alignment.
+The default wavy image is generated from SCSS color and opacity variables; for a
+runtime color swap, replace `--paper-note-lines-background-image` with another
+image value.

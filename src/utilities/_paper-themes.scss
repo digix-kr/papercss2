@@ -3,6 +3,22 @@
   Use theme classes on html/body or consume the custom properties directly.
 */
 
+html {
+  --paper-note-lines-background-image: #{paper-note-lines-url($paper-note-lines-color, $paper-note-lines-opacity)};
+  --paper-note-lines-background-position: 0 var(--paper-note-lines-offset-y);
+}
+
+html.dark {
+  --paper-note-lines-background-image: #{paper-note-lines-url($dark-paper-note-lines-color, $dark-paper-note-lines-opacity)};
+}
+
+.paper-note-lines {
+  background-image: var(--paper-note-lines-background-image);
+  background-position: var(--paper-note-lines-background-position);
+  background-repeat: repeat;
+  background-size: var(--paper-note-lines-background-size);
+}
+
 .paper-theme-postit {
   --paper-theme-body-background: var(--paper-theme-postit-body-background);
   --paper-theme-shell-background: var(--paper-theme-postit-shell-background);
