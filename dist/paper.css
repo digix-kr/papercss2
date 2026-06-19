@@ -57,8 +57,8 @@ html {
   --paper-selection-color: #2f2924;
   --paper-selection-native-background: #ffdc63;
   --paper-selection-brush-opacity: 0.84;
-  --paper-selection-brush-height-scale: 0.9;
-  --paper-selection-brush-min-height: 10px;
+  --paper-selection-brush-height-scale: 1.17;
+  --paper-selection-brush-min-height: 13px;
   --paper-selection-brush-horizontal-bleed: 3px;
   --paper-selection-paper-marker-background: #ffdc63;
   --paper-selection-paper-marker-color: #2f2924;
@@ -140,8 +140,8 @@ html.dark {
   --paper-selection-color: #fffbe7;
   --paper-selection-native-background: rgba(255, 220, 99, 0.56);
   --paper-selection-brush-opacity: 0.78;
-  --paper-selection-brush-height-scale: 0.9;
-  --paper-selection-brush-min-height: 10px;
+  --paper-selection-brush-height-scale: 1.17;
+  --paper-selection-brush-min-height: 13px;
   --paper-selection-brush-horizontal-bleed: 3px;
   --paper-selection-paper-marker-background: rgba(255, 220, 99, 0.56);
   --paper-selection-paper-marker-color: #fffbe7;
@@ -1527,7 +1527,7 @@ html.dark {
   -webkit-clip-path: polygon(0 22%, 4% 10%, 16% 16%, 31% 8%, 47% 14%, 63% 9%, 79% 15%, 96% 8%, 100% 20%, 98% 83%, 82% 90%, 65% 84%, 49% 93%, 32% 86%, 17% 91%, 3% 82%);
           clip-path: polygon(0 22%, 4% 10%, 16% 16%, 31% 8%, 47% 14%, 63% 9%, 79% 15%, 96% 8%, 100% 20%, 98% 83%, 82% 90%, 65% 84%, 49% 93%, 32% 86%, 17% 91%, 3% 82%);
   display: block;
-  height: var(--paper-selection-brush-height, var(--paper-selection-brush-min-height, 10px));
+  height: var(--paper-selection-brush-height, var(--paper-selection-brush-min-height, 13px));
   left: var(--paper-selection-brush-left, 0);
   mix-blend-mode: multiply;
   opacity: var(--paper-selection-brush-opacity);

@@ -76,8 +76,8 @@ Tune the overlay size with these optional tokens:
 ```css
 :root {
   --paper-selection-brush-opacity: 0.84;
-  --paper-selection-brush-height-scale: 0.9;
-  --paper-selection-brush-min-height: 10px;
+  --paper-selection-brush-height-scale: 1.17;
+  --paper-selection-brush-min-height: 13px;
   --paper-selection-brush-horizontal-bleed: 3px;
 }
 ```
