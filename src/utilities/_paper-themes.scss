@@ -1,0 +1,24 @@
+/*
+  Paper surface theme tokens.
+  Use theme classes on html/body or consume the custom properties directly.
+*/
+
+.paper-theme-postit {
+  --paper-theme-body-background: var(--paper-theme-postit-body-background);
+  --paper-theme-shell-background: var(--paper-theme-postit-shell-background);
+  --paper-theme-header-background: var(--paper-theme-postit-header-background);
+  --paper-theme-mobile-band-background: var(--paper-theme-postit-mobile-band-background);
+  --paper-theme-menu-background: var(--paper-theme-postit-menu-background);
+  --paper-theme-surface: var(--paper-theme-postit-surface);
+  --paper-theme-surface-strong: var(--paper-theme-postit-surface-strong);
+  --paper-theme-surface-plain: var(--paper-theme-postit-surface-plain);
+  --paper-theme-surface-soft: var(--paper-theme-postit-surface-soft);
+  --paper-theme-surface-muted: var(--paper-theme-postit-surface-muted);
+  --paper-theme-hover-surface: var(--paper-theme-postit-hover-surface);
+  --paper-theme-border: var(--paper-theme-postit-border);
+  --paper-theme-border-light: var(--paper-theme-postit-border-light);
+  --paper-theme-border-counter: var(--paper-theme-postit-border-counter);
+  --main-background: var(--paper-theme-surface);
+  --main-background-light: var(--paper-theme-surface-strong);
+  background-color: var(--paper-theme-body-background);
+}

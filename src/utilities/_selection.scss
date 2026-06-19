@@ -33,6 +33,14 @@
   --paper-selection-native-background: transparent;
 }
 
+.paper-selection-brushed input::selection,
+.paper-selection-brushed textarea::selection {
+  background-color: $paper-selection-background;
+  background-color: var(--paper-selection-background);
+  color: $paper-selection-color;
+  color: var(--paper-selection-color);
+}
+
 .paper-selection-brush-layer {
   contain: layout style paint;
   inset: 0;
@@ -57,7 +65,7 @@
     inset 0 -0.12em 0 rgba(#000, 0.05);
   clip-path: polygon(0 22%, 4% 10%, 16% 16%, 31% 8%, 47% 14%, 63% 9%, 79% 15%, 96% 8%, 100% 20%, 98% 83%, 82% 90%, 65% 84%, 49% 93%, 32% 86%, 17% 91%, 3% 82%);
   display: block;
-  height: var(--paper-selection-brush-height, 1em);
+  height: var(--paper-selection-brush-height, var(--paper-selection-brush-min-height, 10px));
   left: var(--paper-selection-brush-left, 0);
   mix-blend-mode: multiply;
   opacity: var(--paper-selection-brush-opacity);

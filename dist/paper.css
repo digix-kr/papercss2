@@ -53,16 +53,33 @@ html {
   --shadow-color-regular: rgba(0, 0, 0, 0.2);
   --shadow-color-hover: rgba(0, 0, 0, 0.3);
   --primary-inverse: #fff;
-  --paper-selection-background: #fff0a8;
+  --paper-selection-background: #ffdc63;
   --paper-selection-color: #2f2924;
-  --paper-selection-native-background: #fff0a8;
-  --paper-selection-brush-opacity: 0.76;
-  --paper-selection-paper-marker-background: #fff0a8;
+  --paper-selection-native-background: #ffdc63;
+  --paper-selection-brush-opacity: 0.84;
+  --paper-selection-brush-height-scale: 0.9;
+  --paper-selection-brush-min-height: 10px;
+  --paper-selection-brush-horizontal-bleed: 3px;
+  --paper-selection-paper-marker-background: #ffdc63;
   --paper-selection-paper-marker-color: #2f2924;
   --paper-selection-blue-pencil-background: #cbefff;
   --paper-selection-blue-pencil-color: #1f526b;
   --paper-selection-rose-correction-background: #ffd8d0;
   --paper-selection-rose-correction-color: #7f2722;
+  --paper-theme-postit-body-background: #fff7bd;
+  --paper-theme-postit-shell-background: linear-gradient(180deg, rgba(255, 251, 214, 0.92), rgba(255, 242, 165, 0.9)), #fff7bd;
+  --paper-theme-postit-header-background: rgba(255, 248, 189, 0.94);
+  --paper-theme-postit-mobile-band-background: rgba(255, 248, 189, 0.9);
+  --paper-theme-postit-menu-background: #fff8bd;
+  --paper-theme-postit-surface: #fff8bd;
+  --paper-theme-postit-surface-strong: #fffbd6;
+  --paper-theme-postit-surface-plain: #fffce1;
+  --paper-theme-postit-surface-soft: #fff1a4;
+  --paper-theme-postit-surface-muted: #fff5b5;
+  --paper-theme-postit-hover-surface: #ffed93;
+  --paper-theme-postit-border: #d9bd50;
+  --paper-theme-postit-border-light: #e2cb6c;
+  --paper-theme-postit-border-counter: #bfa641;
 }
 
 html.dark {
@@ -114,11 +131,14 @@ html.dark {
   --shadow-color-regular: rgba(0, 0, 0, 0.2);
   --shadow-color-hover: rgba(0, 0, 0, 0.3);
   --primary-inverse: #41403e;
-  --paper-selection-background: rgba(246, 216, 101, 0.5);
+  --paper-selection-background: rgba(255, 220, 99, 0.56);
   --paper-selection-color: #fffbe7;
-  --paper-selection-native-background: rgba(246, 216, 101, 0.5);
-  --paper-selection-brush-opacity: 0.7;
-  --paper-selection-paper-marker-background: rgba(246, 216, 101, 0.5);
+  --paper-selection-native-background: rgba(255, 220, 99, 0.56);
+  --paper-selection-brush-opacity: 0.78;
+  --paper-selection-brush-height-scale: 0.9;
+  --paper-selection-brush-min-height: 10px;
+  --paper-selection-brush-horizontal-bleed: 3px;
+  --paper-selection-paper-marker-background: rgba(255, 220, 99, 0.56);
   --paper-selection-paper-marker-color: #fffbe7;
   --paper-selection-blue-pencil-background: rgba(97, 183, 217, 0.42);
   --paper-selection-blue-pencil-color: #f2fbff;
@@ -1374,18 +1394,42 @@ html.dark {
 }
 
 /*
+  Paper surface theme tokens.
+  Use theme classes on html/body or consume the custom properties directly.
+*/
+.paper-theme-postit {
+  --paper-theme-body-background: var(--paper-theme-postit-body-background);
+  --paper-theme-shell-background: var(--paper-theme-postit-shell-background);
+  --paper-theme-header-background: var(--paper-theme-postit-header-background);
+  --paper-theme-mobile-band-background: var(--paper-theme-postit-mobile-band-background);
+  --paper-theme-menu-background: var(--paper-theme-postit-menu-background);
+  --paper-theme-surface: var(--paper-theme-postit-surface);
+  --paper-theme-surface-strong: var(--paper-theme-postit-surface-strong);
+  --paper-theme-surface-plain: var(--paper-theme-postit-surface-plain);
+  --paper-theme-surface-soft: var(--paper-theme-postit-surface-soft);
+  --paper-theme-surface-muted: var(--paper-theme-postit-surface-muted);
+  --paper-theme-hover-surface: var(--paper-theme-postit-hover-surface);
+  --paper-theme-border: var(--paper-theme-postit-border);
+  --paper-theme-border-light: var(--paper-theme-postit-border-light);
+  --paper-theme-border-counter: var(--paper-theme-postit-border-counter);
+  --main-background: var(--paper-theme-surface);
+  --main-background-light: var(--paper-theme-surface-strong);
+  background-color: var(--paper-theme-body-background);
+}
+
+/*
   Text selection treatment.
   Use preset classes on html/body or override the two custom properties directly.
 */
 ::-moz-selection {
-  background-color: #fff0a8;
+  background-color: #ffdc63;
   background-color: var(--paper-selection-native-background);
   color: #2f2924;
   color: var(--paper-selection-color);
   text-shadow: none;
 }
 ::selection {
-  background-color: #fff0a8;
+  background-color: #ffdc63;
   background-color: var(--paper-selection-native-background);
   color: #2f2924;
   color: var(--paper-selection-color);
@@ -1414,6 +1458,21 @@ html.dark {
   --paper-selection-native-background: transparent;
 }
 
+.paper-selection-brushed input::-moz-selection, .paper-selection-brushed textarea::-moz-selection {
+  background-color: #ffdc63;
+  background-color: var(--paper-selection-background);
+  color: #2f2924;
+  color: var(--paper-selection-color);
+}
+
+.paper-selection-brushed input::selection,
+.paper-selection-brushed textarea::selection {
+  background-color: #ffdc63;
+  background-color: var(--paper-selection-background);
+  color: #2f2924;
+  color: var(--paper-selection-color);
+}
+
 .paper-selection-brush-layer {
   contain: layout style paint;
   inset: 0;
@@ -1435,7 +1494,7 @@ html.dark {
   -webkit-clip-path: polygon(0 22%, 4% 10%, 16% 16%, 31% 8%, 47% 14%, 63% 9%, 79% 15%, 96% 8%, 100% 20%, 98% 83%, 82% 90%, 65% 84%, 49% 93%, 32% 86%, 17% 91%, 3% 82%);
           clip-path: polygon(0 22%, 4% 10%, 16% 16%, 31% 8%, 47% 14%, 63% 9%, 79% 15%, 96% 8%, 100% 20%, 98% 83%, 82% 90%, 65% 84%, 49% 93%, 32% 86%, 17% 91%, 3% 82%);
   display: block;
-  height: var(--paper-selection-brush-height, 1em);
+  height: var(--paper-selection-brush-height, var(--paper-selection-brush-min-height, 10px));
   left: var(--paper-selection-brush-left, 0);
   mix-blend-mode: multiply;
   opacity: var(--paper-selection-brush-opacity);

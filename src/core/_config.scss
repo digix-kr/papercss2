@@ -70,7 +70,7 @@ $shadow-color-hover: hsla(0, 0%, 0%, 0.3) !default;
 
 $primary-inverse: #fff !default;
 
-$paper-selection-paper-marker-background: #fff0a8 !default;
+$paper-selection-paper-marker-background: #ffdc63 !default;
 $paper-selection-paper-marker-color: #2f2924 !default;
 $paper-selection-blue-pencil-background: #cbefff !default;
 $paper-selection-blue-pencil-color: #1f526b !default;
@@ -79,7 +79,26 @@ $paper-selection-rose-correction-color: #7f2722 !default;
 $paper-selection-background: $paper-selection-paper-marker-background !default;
 $paper-selection-color: $paper-selection-paper-marker-color !default;
 $paper-selection-native-background: $paper-selection-background !default;
-$paper-selection-brush-opacity: 0.76 !default;
+$paper-selection-brush-opacity: 0.84 !default;
+$paper-selection-brush-height-scale: 0.9 !default;
+$paper-selection-brush-min-height: 10px !default;
+$paper-selection-brush-horizontal-bleed: 3px !default;
+
+$paper-theme-postit-body-background: #fff7bd !default;
+$paper-theme-postit-shell-background: linear-gradient(180deg, rgba(#fffbd6, 0.92), rgba(#fff2a5, 0.9)),
+  #fff7bd !default;
+$paper-theme-postit-header-background: rgba(#fff8bd, 0.94) !default;
+$paper-theme-postit-mobile-band-background: rgba(#fff8bd, 0.9) !default;
+$paper-theme-postit-menu-background: #fff8bd !default;
+$paper-theme-postit-surface: #fff8bd !default;
+$paper-theme-postit-surface-strong: #fffbd6 !default;
+$paper-theme-postit-surface-plain: #fffce1 !default;
+$paper-theme-postit-surface-soft: #fff1a4 !default;
+$paper-theme-postit-surface-muted: #fff5b5 !default;
+$paper-theme-postit-hover-surface: #ffed93 !default;
+$paper-theme-postit-border: #d9bd50 !default;
+$paper-theme-postit-border-light: #e2cb6c !default;
+$paper-theme-postit-border-counter: #bfa641 !default;
 
 
 // Set dark theme colors
@@ -143,7 +162,7 @@ $dark-shadow-color-hover: hsla(0, 0%, 0%, 0.3) !default;
 
 $dark-primary-inverse: $primary !default;
 
-$dark-paper-selection-paper-marker-background: rgba(#f6d865, 0.5) !default;
+$dark-paper-selection-paper-marker-background: rgba(#ffdc63, 0.56) !default;
 $dark-paper-selection-paper-marker-color: #fffbe7 !default;
 $dark-paper-selection-blue-pencil-background: rgba(#61b7d9, 0.42) !default;
 $dark-paper-selection-blue-pencil-color: #f2fbff !default;
@@ -152,7 +171,10 @@ $dark-paper-selection-rose-correction-color: #fff4f1 !default;
 $dark-paper-selection-background: $dark-paper-selection-paper-marker-background !default;
 $dark-paper-selection-color: $dark-paper-selection-paper-marker-color !default;
 $dark-paper-selection-native-background: $dark-paper-selection-background !default;
-$dark-paper-selection-brush-opacity: 0.7 !default;
+$dark-paper-selection-brush-opacity: 0.78 !default;
+$dark-paper-selection-brush-height-scale: $paper-selection-brush-height-scale !default;
+$dark-paper-selection-brush-min-height: $paper-selection-brush-min-height !default;
+$dark-paper-selection-brush-horizontal-bleed: $paper-selection-brush-horizontal-bleed !default;
 
 
 
@@ -210,12 +232,29 @@ $theme-map: (
     paper-selection-color: $paper-selection-color,
     paper-selection-native-background: $paper-selection-native-background,
     paper-selection-brush-opacity: $paper-selection-brush-opacity,
+    paper-selection-brush-height-scale: $paper-selection-brush-height-scale,
+    paper-selection-brush-min-height: $paper-selection-brush-min-height,
+    paper-selection-brush-horizontal-bleed: $paper-selection-brush-horizontal-bleed,
     paper-selection-paper-marker-background: $paper-selection-paper-marker-background,
     paper-selection-paper-marker-color: $paper-selection-paper-marker-color,
     paper-selection-blue-pencil-background: $paper-selection-blue-pencil-background,
     paper-selection-blue-pencil-color: $paper-selection-blue-pencil-color,
     paper-selection-rose-correction-background: $paper-selection-rose-correction-background,
     paper-selection-rose-correction-color: $paper-selection-rose-correction-color,
+    paper-theme-postit-body-background: $paper-theme-postit-body-background,
+    paper-theme-postit-shell-background: $paper-theme-postit-shell-background,
+    paper-theme-postit-header-background: $paper-theme-postit-header-background,
+    paper-theme-postit-mobile-band-background: $paper-theme-postit-mobile-band-background,
+    paper-theme-postit-menu-background: $paper-theme-postit-menu-background,
+    paper-theme-postit-surface: $paper-theme-postit-surface,
+    paper-theme-postit-surface-strong: $paper-theme-postit-surface-strong,
+    paper-theme-postit-surface-plain: $paper-theme-postit-surface-plain,
+    paper-theme-postit-surface-soft: $paper-theme-postit-surface-soft,
+    paper-theme-postit-surface-muted: $paper-theme-postit-surface-muted,
+    paper-theme-postit-hover-surface: $paper-theme-postit-hover-surface,
+    paper-theme-postit-border: $paper-theme-postit-border,
+    paper-theme-postit-border-light: $paper-theme-postit-border-light,
+    paper-theme-postit-border-counter: $paper-theme-postit-border-counter,
   ),
   dark: (
     primary: $dark-primary,
@@ -270,6 +309,9 @@ $theme-map: (
     paper-selection-color: $dark-paper-selection-color,
     paper-selection-native-background: $dark-paper-selection-native-background,
     paper-selection-brush-opacity: $dark-paper-selection-brush-opacity,
+    paper-selection-brush-height-scale: $dark-paper-selection-brush-height-scale,
+    paper-selection-brush-min-height: $dark-paper-selection-brush-min-height,
+    paper-selection-brush-horizontal-bleed: $dark-paper-selection-brush-horizontal-bleed,
     paper-selection-paper-marker-background: $dark-paper-selection-paper-marker-background,
     paper-selection-paper-marker-color: $dark-paper-selection-paper-marker-color,
     paper-selection-blue-pencil-background: $dark-paper-selection-blue-pencil-background,

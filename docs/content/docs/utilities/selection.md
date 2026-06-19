@@ -29,7 +29,7 @@ Override the selection custom properties when a product needs its own palette:
 
 ```css
 :root {
-  --paper-selection-background: #fff0a8;
+  --paper-selection-background: #ffdc63;
   --paper-selection-color: #2f2924;
 }
 ```
@@ -70,3 +70,20 @@ transparent, then render selection rectangles with PaperCSS2's overlay classes:
 The overlay mark uses the active preset's `--paper-selection-background`, so
 switching from Paper Marker to Blue Pencil or Rose Correction changes both the
 native fallback and the brushed overlay.
+
+Tune the overlay size with these optional tokens:
+
+```css
+:root {
+  --paper-selection-brush-opacity: 0.84;
+  --paper-selection-brush-height-scale: 0.9;
+  --paper-selection-brush-min-height: 10px;
+  --paper-selection-brush-horizontal-bleed: 3px;
+}
+```
+
+Use one painted layer at a time: `.paper-selection-brushed` makes native
+selection transparent, and the runtime should render only
+`.paper-selection-brush-mark` elements. iOS Safari does not support styling
+native text selection with `::selection`; products should skip brushed overlays
+there and allow the browser default.
