@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://getpapercss.com">
-    <img src="https://raw.githubusercontent.com/papercss/papercss/master/docs/static/favicon.ico?raw=true" alt="PaperCSS logo">
+  <a href="https://papercss.digix.kr">
+    <img src="docs/static/favicon.ico" alt="PaperCSS2 logo">
   </a>
 
-  <h3 align="center">PaperCSS</h3>
+  <h3 align="center">PaperCSS2</h3>
 
-  <p align="center">The less formal CSS framework, with a quick and easy integration.</p>
+  <p align="center">The less formal CSS framework, maintained as a fork for product-focused paper UI.</p>
 </p>
 
 ## Table of contents
@@ -40,6 +40,8 @@ Current fork usage:
 - Treat this fork as the source for generated PaperCSS2 CSS in downstream apps;
   do not assume the upstream `papercss` npm package or CDN includes these
   changes.
+- In package-based contexts, use the fork package name `papercss2`. The upstream
+  `papercss` package remains the unmodified PaperCSS baseline.
 - Downstream apps should import built CSS from `dist/paper.css`, not SCSS source
   files.
 - After SCSS changes, rebuild with `npm run css:build` in this fork. From
@@ -87,6 +89,12 @@ Current fork changes:
   `paper-sketch-line-vertical` / `paper-sketch-line-vertical-url` SCSS helpers,
   so quoted/shared content uses a wavy vertical stroke on its left edge instead
   of a ruler-straight `border-left`.
+- Added Post-it paper theme tokens and `.paper-theme-postit`, which maps
+  `--paper-theme-postit-*` values into generic `--paper-theme-*` variables for
+  app shells, headers, menus, surfaces, hover states, and borders.
+- Added notebook-style page backgrounds with `.paper-note-lines`,
+  `--paper-note-lines-*` runtime tokens, and the `paper-note-lines` /
+  `paper-note-lines-url` SCSS helpers.
 
 Maintenance rule:
 
@@ -101,15 +109,18 @@ Maintenance rule:
 
 ## Quick-start
 
-There are several options available:
+There are several fork-safe options available:
 
-- You can [download the latest release](https://github.com/papercss/papercss/releases).
-- Clone the repo: `git clone https://github.com/papercss/papercss.git`
-- Install with npm: `npm install papercss`
-- Install with yarn: `yarn add papercss`
-- Import it using a CDN (it will automatically download the latest version):
-  - `https://unpkg.com/papercss/dist/paper.min.css`
-  - `https://unpkg.com/papercss/dist/paper.css`
+- Download fork release assets from
+  [GitHub Releases](https://github.com/digix-kr/papercss2/releases) when a
+  release has been published.
+- Clone the fork directly: `git clone https://github.com/digix-kr/papercss2.git`
+- Use it as a submodule or local file dependency while the fork is evolving.
+- Import the generated CSS from this fork:
+  - `dist/paper.css`
+  - `dist/paper.min.css`
+- If you intentionally want upstream PaperCSS without PaperCSS2 fork features,
+  use `npm install papercss` or the upstream `unpkg.com/papercss` CDN URLs.
 
 ## Content of the framework
 
@@ -121,9 +132,9 @@ You can also play with original, source files, written in SCSS, in `src/`.
 
 ## Documentation
 
-You can view the docs at [getpapercss.com](https://www.getpapercss.com). Those are directly from the `master` branch; this means those features are stable and ready to be used in your project.
-
-You can also view the develop branch at [develop.getpapercss.com](https://develop.getpapercss.com), this includes new features that are coming soon in the master branch. Be warned, a feature in develop can be removed without any prevention.
+The fork docs are configured for [papercss.digix.kr](https://papercss.digix.kr)
+and are built from this repository. For local docs, run `npm run dev` and open
+the Hugo server URL printed by the command.
 
 ## Customizing
 
@@ -139,31 +150,27 @@ This project is open source and contributions are very welcomed. It is also as b
 
 Please before sending a PR, make sure you are properly using the `.editorconfig` file with your IDE. If your IDE doesn't natively support `editorconfig` files, you can use an extension/package/module. For example in Atom there is the [editorconfig package](https://atom.io/packages/editorconfig), as well for [Sublime Text](https://github.com/sindresorhus/editorconfig-sublime), [VS Code](https://github.com/editorconfig/editorconfig-vscode), [Vim](https://github.com/editorconfig/editorconfig-vim), ...
 
-Once you are ready to contribute, here the workflow you should follow:
+Once you are ready to contribute to this fork, use this workflow:
 
-- Fork the repo then clone it: `git clone git@github.com:[your_username]/papercss.git`
-- `cd papercss` then install dependencies: `npm install`
-- Change your current branch to `develop`: `git checkout develop`
-- Create your new branch where you will write your code: `git checkout -b feature-thing develop`. Please be sure to prepend your new feature branch with "feature-"
+- Fork the repo then clone it: `git clone git@github.com:[your_username]/papercss2.git`
+- `cd papercss2` then install dependencies: `npm install`
+- Create your new branch from `main`: `git checkout -b feature-thing main`.
 - Write some code!
 - To build the scss (in `src/`) to css (in `dist/`), run `npm run css:build`. Note: you will need to re-run this command to include the latest changes in `src/`.
 - To preview your changes, you can run `npm start`. This will start a `localhost` server.
 - Check to make sure your code is following style rules with `npm run stylelint`
 - Once done commit and push your changes to your fork. The linter is also run as a pre-commit hook.
-- Open a pull request on the origin papercss repo. Be sure to include any pictures and/or details on what you have done; it will help reviewers **a lot**!
-- When your changes are approved, they will be merged into the `develop` branch, which will finally be merged into the `master` branch when we reach a milestone regarding features and bug fixes. Check out [Vincent Driessen's blog post](http://nvie.com/posts/a-successful-git-branching-model/), [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html), or [#27](https://github.com/rhyneav/papercss/issues/27) for more details on how this works.
-
-Note: If you have a hotfix (usually typos and minor documentation tweaks), create your hotfix branch off of the master branch instead of develop: `git checkout -b hotfix-thing master`. The changes will be merged into both the master and develop to keep the branches consistent.
+- Open a pull request against `digix-kr/papercss2`.
 
 ## About
 
-PaperCSS was originally made by [@rhyneav](https://github.com/rhyneav) to be something different than the typical mODerN STylEs and clean pages found in every other CSS framework. It was built with LESS and deployed on a single index.html page before being open sourced. It has since evolved; The CSS source has been rewritten in SCSS and the documentation is now built with Hugo (all thanks to some [wonderful contributors](https://github.com/papercss/papercss/graphs/contributors)). It is currently maintained by the [PaperCSS team](https://github.com/orgs/papercss/people).
+PaperCSS was originally made by [@rhyneav](https://github.com/rhyneav) to be something different than the typical mODerN STylEs and clean pages found in every other CSS framework. It was built with LESS and deployed on a single index.html page before being open sourced. It has since evolved; the CSS source has been rewritten in SCSS and the documentation is now built with Hugo. PaperCSS2 is maintained by [@digix-kr](https://github.com/digix-kr) as a fork with product-focused paper UI additions.
 
 The goal of PaperCSS is to be as minimal as possible when adding classes. For example, a button should just look like a paper button. There shouldn't be a need to add a class such as `paper-button`. Because of this, adding PaperCSS to a markdown generated page should instantly paper-ize it.
 
 Feel free to use it for wireframes, web apps, blogs, or whatever else you can think of!
 
-If you are new to Git or SCSS, this would be a great project to get your feet wet with. I'd be happy to help walk you through the pull request process.
+If you are new to Git or SCSS, this remains a good project to learn with because the CSS source, generated output, and docs live in one small repository.
 
 ## Resources
 
@@ -183,6 +190,6 @@ Icons:
 
 ## Credits and license
 
-Code and documentation under [ISC license](https://github.com/papercss/papercss/blob/master/license).
+Code and documentation under the [ISC license](LICENSE.md).
 
 Shout out to Tiffany Rayside for creating Imperfect Buttons, which was an inspiration for this project. https://codepen.io/tmrDevelops/pen/VeRvKX

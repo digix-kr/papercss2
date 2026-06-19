@@ -5,10 +5,10 @@ menu: main
 weight: -90
 ---
 
-PaperCSS was originally made by [@rhyneav](https://github.com/rhyneav) to be something different than the typical mODerN STylEs and clean pages found in every other CSS framework. It was built with LESS and deployed on a single index.html page before being open sourced. It has since evolved; The CSS source has been rewritten in SCSS and the documentation is now built with Hugo (all thanks to some [wonderful contributors](https://github.com/digix-kr/papercss/graphs/contributors)). This fork is currently maintained by [@digix-kr](https://github.com/digix-kr).
+PaperCSS was originally made by [@rhyneav](https://github.com/rhyneav) to be something different than the typical mODerN STylEs and clean pages found in every other CSS framework. It was built with LESS and deployed on a single index.html page before being open sourced. It has since evolved; the CSS source has been rewritten in SCSS and the documentation is now built with Hugo. PaperCSS2 is maintained by [@digix-kr](https://github.com/digix-kr) as a fork with product-focused paper UI additions.
 
 The goal of PaperCSS is to be as minimal as possible when adding classes. For example, a button should just look like a paper button. There shouldn't be a need to add a class such as `paper-button`. Because of this, adding PaperCSS to a markdown generated page should instantly paper-ize it.
 
-Feel free to use it for wireframes, webapps, blogs, or whatever else you can think of! It is licensed under the [ISC License](https://github.com/digix-kr/papercss/blob/master/LICENSE.md), so use it wherever you want to.  
+Feel free to use it for wireframes, webapps, blogs, or whatever else you can think of! It is licensed under the [ISC License](https://github.com/digix-kr/papercss2/blob/main/LICENSE.md), so use it wherever you want to.
 
-If you are new to Git or SCSS, this would be a great project to get your feet wet with. Check out the [Git repo](https://github.com/digix-kr/papercss) for more info!
+If you are new to Git or SCSS, this remains a good project to learn with. Check out the [Git repo](https://github.com/digix-kr/papercss2) for more info!

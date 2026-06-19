@@ -53,7 +53,7 @@ This can be used to implement modals along with features like title, subtitle, t
     <h4 class="modal-title">Modal Title</h4>
     <h5 class="modal-subtitle">Modal Subtitle</h5>
     <p class="modal-text">This is another example of modal which is implemented with pure CSS! :D</p>
-    <a href="/#download">Get PaperCSS</a>
+    <a href="/#download">Get PaperCSS2</a>
     <label for="modal-2" class="modal-link">Close</label>
   </div>
 </div>
@@ -72,7 +72,7 @@ This can be used to implement modals along with features like title, subtitle, t
     <h4 class="modal-title">Modal Title</h4>
     <h5 class="modal-subtitle">Modal Subtitle</h5>
     <p class="modal-text">This is another example of modal which is implemented with pure CSS! :D</p>
-    <a href="/#download">Get PaperCSS</a>
+    <a href="/#download">Get PaperCSS2</a>
     <label for="modal-2" class="modal-link">Close</label>
   </div>
 </div>

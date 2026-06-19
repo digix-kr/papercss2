@@ -10,11 +10,13 @@ Run this checklist whenever a new tagged release is created for this fork.
 
 - Confirm the root `README.md` fork notes include consumer-visible changes since
   the previous release.
-- Update version references in `docs/content/_index.md` for NPM and CDN examples.
-- Verify `https://unpkg.com/papercss@<version>/dist/paper.css` and
-  `https://unpkg.com/papercss@<version>/dist/paper.min.css` resolve.
+- Update version references in `docs/content/_index.md` for package and CDN
+  examples only after a fork-owned `papercss2` package is published.
+- Verify `https://unpkg.com/papercss2@<version>/dist/paper.css` and
+  `https://unpkg.com/papercss2@<version>/dist/paper.min.css` resolve before
+  presenting CDN links as fork-owned.
 - Ensure `GitHub Releases` button in `docs/content/_index.md` points to
-  `https://github.com/digix-kr/papercss/releases`.
+  `https://github.com/digix-kr/papercss2/releases`.
 - If direct release asset buttons are reintroduced, ensure URLs target this fork
   and the current tag.
 

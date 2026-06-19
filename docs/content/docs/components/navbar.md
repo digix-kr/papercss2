@@ -18,7 +18,7 @@ description: PaperCSS Navbar
       <ul class="inline">
         <li><a href="/docs/">Documentation</a></li>
         <li><a href="/about/">About</a></li>
-        <li><a href="https://github.com/digix-kr/papercss" target="_blank">Github</a></li>
+        <li><a href="https://github.com/digix-kr/papercss2" target="_blank">Github</a></li>
       </ul>
     </div>
   </div>

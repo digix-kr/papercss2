@@ -14,7 +14,7 @@ Example structure:
 consumer-project/
   package.json
   packages/
-    papercss/
+    papercss2/
       package.json
       src/
       dist/
@@ -25,10 +25,10 @@ Consumer `package.json`:
 ```json
 {
   "dependencies": {
-    "papercss": "file:./packages/papercss"
+    "papercss2": "file:./packages/papercss2"
   },
   "scripts": {
-    "build:papercss": "npm --prefix packages/papercss run css:build"
+    "build:papercss2": "npm --prefix packages/papercss2 run css:build"
   }
 }
 ```
@@ -36,16 +36,16 @@ Consumer `package.json`:
 Consumer import:
 
 ```js
-import "papercss/dist/paper.css";
+import "papercss2/dist/paper.css";
 ```
 
 ## Important Constraint
 
 Consumers should import built CSS from `dist/`, not SCSS source files.
-After editing `packages/papercss/src/**/*.scss`, rebuild:
+After editing `packages/papercss2/src/**/*.scss`, rebuild:
 
 ```bash
-npm --prefix packages/papercss run css:build
+npm --prefix packages/papercss2 run css:build
 ```
 
 ## Alternative

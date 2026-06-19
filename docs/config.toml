@@ -1,5 +1,5 @@
 baseURL = "https://papercss.digix.kr"
-title = "PaperCSS"
+title = "PaperCSS2"
 
 # Directories
 publishDir = "../public"
@@ -10,7 +10,7 @@ pygmentsStyle = "emacs"
 pygmentsUseClasses=true
 
 [params.info]
-description = "the less formal CSS framework"
+description = "the less formal CSS framework fork"
 title404 = "Nothing's here!"
 
 [params.seo]

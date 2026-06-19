@@ -1,37 +1,65 @@
 ---
-title: Get PaperCSS
+title: Get PaperCSS2
 menu: main
 weight: -270
 ---
 
 #### Download
 
-Official release download links are maintained during release.
-If links below still point to placeholders, use NPM/CDN for immediate usage and
-check release preparation guidance in `docs/infos/release-policy.md`.
+PaperCSS2 fork builds are maintained from this repository. During active
+development, consume the generated CSS from the fork checkout, a submodule, or a
+local file dependency. The upstream `papercss` NPM package and CDN do not include
+PaperCSS2 fork features.
 
 <div class="row flex-spaces text-center">
-  <a class="paper-btn margin" href="https://github.com/digix-kr/papercss/releases">GitHub Releases</a>
-  <a class="paper-btn margin" href="https://www.npmjs.com/package/papercss">NPM Package</a>
-  <a class="paper-btn margin" href="https://unpkg.com/papercss/">unpkg CDN</a>
+  <a class="paper-btn margin" href="https://github.com/digix-kr/papercss2/releases">GitHub Releases</a>
+  <a class="paper-btn margin" href="https://github.com/digix-kr/papercss2">GitHub Repository</a>
 </div>
 
-#### NPM
+#### Fork checkout
 
-PaperCSS is available on NPM, current version 1.9.2. Install with <code>npm install papercss --save</code> and find the CSS in:
+Clone the fork and build the CSS artifacts:
 
-- node_modules/papercss/dist/paper.css
-- node_modules/papercss/dist/paper.min.css
+```sh
+git clone https://github.com/digix-kr/papercss2.git
+cd papercss2
+npm install
+npm run css:build
+```
 
-#### CDN
+Then import one of the generated files:
 
-Don't want to download it? That's cool. You can just link to PaperCSS via
-[unpkg's CDN](https://unpkg.com/#/). You can use either:
+- dist/paper.css
+- dist/paper.min.css
+
+#### Local package
+
+When using the fork from another project during active development, use a local
+file dependency:
+
+```json
+{
+  "dependencies": {
+    "papercss2": "file:./packages/papercss2"
+  }
+}
+```
+
+Then import the built CSS:
+
+```js
+import "papercss2/dist/paper.css";
+```
+
+#### Upstream baseline
+
+If you only need upstream PaperCSS 1.9.2 without fork features, install or link
+the upstream package:
 
 - [https://unpkg.com/papercss@1.9.2/dist/paper.css](https://unpkg.com/papercss@1.9.2/dist/paper.css)
 - [https://unpkg.com/papercss@1.9.2/dist/paper.min.css](https://unpkg.com/papercss@1.9.2/dist/paper.min.css)
 
-Here's a quick snippet to get started with PaperCSS:
+Here's a quick local snippet to get started with a built PaperCSS2 file:
 
 ```html
 <!DOCTYPE html>
@@ -40,10 +68,7 @@ Here's a quick snippet to get started with PaperCSS:
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/papercss@1.9.2/dist/paper.min.css"
-    />
+    <link rel="stylesheet" href="./dist/paper.min.css" />
     <title>Document</title>
   </head>
   <body>
@@ -57,11 +82,11 @@ Here's a quick snippet to get started with PaperCSS:
 
 #### Build it Yourself
 
-If you'd rather customize things, you can build the CSS yourself via the git repo
+If you'd rather customize things, build the CSS yourself via the git repo:
 
 ```sh
-git clone https://github.com/digix-kr/papercss.git
-cd papercss
+git clone https://github.com/digix-kr/papercss2.git
+cd papercss2
 npm install
 npm run build
 ```

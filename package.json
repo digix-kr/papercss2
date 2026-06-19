@@ -1,5 +1,5 @@
 {
-  "name": "papercss",
+  "name": "papercss2",
   "version": "1.9.2",
   "description": "The less formal CSS framework.",
   "main": "dist/paper.css",
@@ -8,22 +8,22 @@
     "css:build": "node ./build/build.js",
     "dev": "concurrently --kill-others \"npm run dev:hot-reload\" \"npm run hugo:serve\"",
     "dev:hot-reload": "node ./build/hot-reload.js",
-    "hugo:build": "hugo -D --source=docs",
-    "hugo:serve": "hugo server --source=docs --disableFastRender",
+    "hugo:build": "node_modules/hugo-bin/vendor/hugo -D --source=docs",
+    "hugo:serve": "node_modules/hugo-bin/vendor/hugo server --source=docs --disableFastRender",
     "lint": "npm run stylelint",
     "start": "npm run hugo:serve",
     "stylelint": "stylelint src/**/*.scss"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/papercss/papercss.git"
+    "url": "git+https://github.com/digix-kr/papercss2.git"
   },
   "author": "Rhyne Vlaservich <rhyneav@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/papercss/papercss/issues"
+    "url": "https://github.com/digix-kr/papercss2/issues"
   },
-  "homepage": "https://www.getpapercss.com",
+  "homepage": "https://papercss.digix.kr",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.8.6",
