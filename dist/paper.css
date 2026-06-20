@@ -3,7 +3,7 @@
 /**
   Global PaperCSS Config
 */
-@import url("https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
 html {
   --primary: #41403e;
   --secondary: #0b74d5;
@@ -1051,7 +1051,7 @@ pre code {
 html {
   color: #41403e;
   color: var(--primary);
-  font-family: "Neucha", sans-serif;
+  font-family: "Poor Story", sans-serif;
   font-size: 20px;
 }
 
@@ -1069,7 +1069,7 @@ input,
 textarea,
 select,
 option {
-  font-family: "Neucha", sans-serif;
+  font-family: "Poor Story", sans-serif;
 }
 
 h1,
@@ -1078,7 +1078,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Patrick Hand SC", sans-serif;
+  font-family: "Poor Story", sans-serif;
   font-weight: normal;
 }
 

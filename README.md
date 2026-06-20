@@ -89,6 +89,8 @@ Current fork changes:
   `paper-sketch-line-vertical` / `paper-sketch-line-vertical-url` SCSS helpers,
   so quoted/shared content uses a wavy vertical stroke on its left edge instead
   of a ruler-straight `border-left`.
+- Changed the default PaperCSS2 body and heading fonts to `Poor Story` so
+  Latin and Korean text share the same handwritten face by default.
 - Added Post-it paper theme tokens and `.paper-theme-postit`, which maps
   `--paper-theme-postit-*` values into generic `--paper-theme-*` variables for
   app shells, headers, menus, surfaces, hover states, and borders.

@@ -3,7 +3,7 @@
 */
 
 // The src for fonts (false to disable)
-$font-src: 'https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC&display=swap' !default;
+$font-src: 'https://fonts.googleapis.com/css2?family=Poor+Story&display=swap' !default;
 
 // Imports
 @if $font-src {
@@ -389,8 +389,8 @@ $colors: (primary, $primary, $primary-light, $primary-text),
 
 // Font settings
 $global-font-size: 20px !default;
-$header-font: 'Patrick Hand SC' !default;
-$body-font: 'Neucha' !default;
+$header-font: 'Poor Story' !default;
+$body-font: 'Poor Story' !default;
 $font-color: $primary !default;
 
 // Responsive breakpoints
