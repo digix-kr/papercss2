@@ -33,6 +33,7 @@ Current capsules:
 - `docs/infos/build-workflow.md`: CSS build outputs and command behavior.
 - `docs/infos/downstream-consumption.md`: Recommended way to consume this fork from another project during active development.
 - `docs/infos/fork-readme-maintenance.md`: README fork change-log ownership and update triggers.
+- `docs/infos/menu-popovers.md`: Compact app/hamburger menu popover width, item, section, and nested-panel classes.
 - `docs/infos/paper-themes.md`: Paper surface theme tokens and Post-it theme maintenance.
 - `docs/infos/profile-card.md`: Profile summary card classes and intended usage.
 - `docs/infos/release-policy.md`: Release-time documentation update checklist for this fork.

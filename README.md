@@ -61,6 +61,11 @@ Current fork changes:
   `.paper-dropdown-trigger`, `.paper-dropdown-menu`, `.paper-dropdown-item`,
   `.paper-dropdown-open`, and `.paper-dropdown-item-selected` /
   `aria-selected="true"` support.
+- Added compact app menu popover styles: `--paper-menu-popover-width`,
+  `.paper-menu-popover`, `.paper-menu-list`, `.paper-menu-section`,
+  `.paper-menu-section-title`, `.paper-menu-item`, and `.paper-menu-nested`
+  for hamburger/dropdown menus with consistent width and hand-drawn nested
+  separators.
 - Added a reusable hand-drawn text-link underline mixin and applied it to
   content links while keeping `.paper-btn`, modal actions, and button-like links
   free of text-link underline artwork.

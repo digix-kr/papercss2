@@ -19,6 +19,50 @@ Use dropdown classes when an application controls the open state with JavaScript
   </div>
 </div>
 
+### App menu popovers
+
+Use `.paper-menu-popover` for compact app/navigation popovers that should share
+one PaperCSS width token. The default width is `--paper-menu-popover-width`
+(`min(18rem, calc(100vw - 2rem))`). Use `.paper-menu-list` and
+`.paper-menu-section` for stacked menu groups, `.paper-menu-item` for full-width
+menu actions, and `.paper-menu-nested` for expanded child panels. The nested
+panel uses the PaperCSS vertical sketch stroke instead of a straight left
+border.
+
+<div class="paper-menu-popover">
+  <div class="paper-menu-list">
+    <div class="paper-menu-section">
+      <button class="paper-menu-item" type="button">My status</button>
+      <button class="paper-menu-item" type="button">Profile</button>
+      <button class="paper-menu-item" type="button">App</button>
+    </div>
+    <div class="paper-menu-section paper-menu-nested">
+      <span class="paper-menu-section-title">Settings</span>
+      <button class="paper-menu-item" type="button">Notifications</button>
+      <button class="paper-menu-item" type="button">Bots</button>
+    </div>
+  </div>
+</div>
+
+#### Code:
+
+```html
+<div class="paper-menu-popover">
+  <div class="paper-menu-list">
+    <div class="paper-menu-section">
+      <button class="paper-menu-item" type="button">My status</button>
+      <button class="paper-menu-item" type="button">Profile</button>
+      <button class="paper-menu-item" type="button">App</button>
+    </div>
+    <div class="paper-menu-section paper-menu-nested">
+      <span class="paper-menu-section-title">Settings</span>
+      <button class="paper-menu-item" type="button">Notifications</button>
+      <button class="paper-menu-item" type="button">Bots</button>
+    </div>
+  </div>
+</div>
+```
+
 #### Code:
 
 ```html

@@ -116,3 +116,90 @@
     @include color('color', 'primary-inverse');
   }
 }
+
+html {
+  --paper-menu-popover-width: min(18rem, calc(100vw - 2rem));
+}
+
+.paper-menu-popover {
+  @include border-style(6);
+  @include color('background-color', 'main-background');
+  @include color('border-color', 'primary');
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 4px 4px 0 rgba($primary, 0.18);
+  box-sizing: border-box;
+  width: var(--paper-menu-popover-width);
+}
+
+.paper-menu-list,
+.paper-menu-section {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.paper-menu-section + .paper-menu-section {
+  background-image: var(--paper-sketch-line-faint);
+  background-position: top center;
+  background-repeat: repeat-x;
+  background-size: 3.2em 0.5em;
+  padding-top: 0.65rem;
+}
+
+.paper-menu-section-title {
+  @include color('color', 'muted-text');
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0 0.15rem;
+}
+
+.paper-menu-item {
+  @include border-style(4);
+  @include color('background-color', 'main-background');
+  @include color('border-color', 'primary-light');
+  @include color('color', 'primary');
+  align-items: center;
+  appearance: none;
+  border-style: solid;
+  border-width: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  line-height: 1.2;
+  margin: 0;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.55rem;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    @include color('background-color', 'primary-shaded-70');
+    @include color('border-color', 'primary-light-10');
+  }
+
+  &.paper-menu-item-selected,
+  &[aria-current='page'],
+  &[aria-selected='true'] {
+    @include color('background-color', 'primary');
+    @include color('border-color', 'primary');
+    @include color('color', 'primary-inverse');
+  }
+}
+
+.paper-menu-nested {
+  background-image: var(--paper-sketch-line-vertical);
+  background-position: left center;
+  background-repeat: repeat-y;
+  background-size: 0.55em 2.6em;
+  padding-left: 0.9rem;
+}

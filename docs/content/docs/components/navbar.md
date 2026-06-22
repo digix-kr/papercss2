@@ -49,6 +49,11 @@ description: PaperCSS Navbar
 
 Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the whole page. It's also mobile responsive and will show a hamburger menu on small screens. No JavaScript required!
 
+For application-controlled hamburger panels, combine your positioned panel with
+`.paper-menu-popover` so the mobile navbar menu uses the same default width as
+other PaperCSS popover menus. Nested panels inside the hamburger can use
+`.paper-menu-nested` for a hand-drawn vertical separator.
+
 ```html
 <nav class="border fixed split-nav">
   <div class="nav-brand">
