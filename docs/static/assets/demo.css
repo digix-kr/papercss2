@@ -49,3 +49,132 @@ img.no-responsive {
 .collapsible.full-width {
   width: 100%;
 }
+
+.docs-example-space {
+  margin: 1rem 0 2rem;
+}
+
+.docs-dropdown-demo {
+  margin-bottom: 6.5rem;
+  min-height: 8.5rem;
+}
+
+.docs-popover-demo {
+  margin: 1rem 0 2rem;
+  overflow: visible;
+  padding: 2.5rem 3rem;
+}
+
+.docs-popover-demo .col,
+.docs-popover-action {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 5rem;
+}
+
+.docs-surface-demo {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.docs-theme-preview {
+  border: 2px solid var(--paper-theme-border, #d9bd50);
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 rgba(65, 64, 62, 0.14);
+  color: #41403e;
+  padding: 1rem;
+}
+
+.docs-theme-preview .paper {
+  background: var(--paper-theme-surface-plain, #fff);
+}
+
+.docs-theme-header {
+  background: var(--paper-theme-header-background, #fff8bd);
+  border-color: var(--paper-theme-border-light, #e2cb6c);
+}
+
+.docs-theme-token-grid {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  margin: 1rem 0 2rem;
+}
+
+.docs-theme-token {
+  background: var(--token-color);
+  border: 2px solid rgba(65, 64, 62, 0.35);
+  color: #41403e;
+  min-height: 4rem;
+  padding: 0.65rem;
+}
+
+.docs-note-line-preview {
+  min-height: 9rem;
+  padding: 1.25rem;
+}
+
+.docs-selection-preview {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  margin: 1rem 0 2rem;
+}
+
+.docs-selection-sample {
+  border: 2px solid rgba(65, 64, 62, 0.25);
+  border-radius: 8px;
+  padding: 0.85rem;
+}
+
+.docs-selection-highlight {
+  background: var(--paper-selection-background);
+  color: var(--paper-selection-color);
+  padding: 0 0.2rem;
+}
+
+.docs-selection-brush-preview {
+  height: 4rem;
+  margin: 1rem 0 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.docs-selection-brush-preview .paper-selection-brush-layer {
+  inset: auto;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.docs-divider-demo {
+  margin: 1rem 0 2rem;
+}
+
+.docs-quote-demo {
+  margin: 1rem 0 2rem;
+  max-width: 42rem;
+}
+
+@media (max-width: 480px) {
+  .docs-popover-demo {
+    padding: 1.25rem 1rem;
+  }
+
+  .docs-popover-demo .col {
+    min-height: 3.5rem;
+  }
+
+  .docs-popover-demo [popover-left],
+  .docs-popover-demo [popover-right],
+  .docs-popover-demo [popover-top],
+  .docs-popover-demo [popover-bottom] {
+    line-height: 1.2;
+    margin: 1.5rem;
+    max-width: 6rem;
+    text-align: center;
+  }
+}

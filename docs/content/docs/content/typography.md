@@ -5,6 +5,9 @@ description: PaperCSS Typography
 
 How pretty is the text?
 
+PaperCSS2 uses `Poor Story` as the default body and heading font so Latin and
+Korean text share the same handwritten face.
+
 # Heading 1
 
 ## Heading 2
@@ -40,6 +43,7 @@ the <a href="https://github.com/digix-kr/papercss2">PaperCSS2 repository</a>.
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
 <p>Lorem ipsum dolor....</p>
+<p>PaperCSS2 uses Poor Story as the default body and heading font.</p>
 <p>
   Read the <a href="/docs/components/forms/">forms documentation</a> or visit
   the <a href="https://github.com/digix-kr/papercss2">PaperCSS2 repository</a>.

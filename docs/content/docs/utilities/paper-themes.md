@@ -17,12 +17,33 @@ Apply the class to `html`, `body`, or a scoped wrapper:
 The class maps the Post-it token set into generic `--paper-theme-*` variables
 and updates `--main-background` plus `--main-background-light`:
 
+<div class="paper-theme-postit docs-surface-demo docs-theme-preview">
+  <div class="paper border docs-theme-header">
+    <strong>Post-it header surface</strong>
+  </div>
+  <div class="paper border">
+    <p>The wrapper uses `.paper-theme-postit`, so generic PaperCSS surface tokens resolve to the Post-it palette.</p>
+    <button type="button">Post-it action</button>
+  </div>
+</div>
+
 ```css
 .paper-theme-postit {
   --paper-theme-surface: var(--paper-theme-postit-surface);
   --paper-theme-border: var(--paper-theme-postit-border);
 }
 ```
+
+Common Post-it surface tokens:
+
+<div class="docs-theme-token-grid">
+  <div class="docs-theme-token" style="--token-color: var(--paper-theme-postit-body-background);">body background</div>
+  <div class="docs-theme-token" style="--token-color: var(--paper-theme-postit-surface);">surface</div>
+  <div class="docs-theme-token" style="--token-color: var(--paper-theme-postit-surface-strong);">surface strong</div>
+  <div class="docs-theme-token" style="--token-color: var(--paper-theme-postit-surface-soft);">surface soft</div>
+  <div class="docs-theme-token" style="--token-color: var(--paper-theme-postit-hover-surface);">hover surface</div>
+  <div class="docs-theme-token" style="--token-color: var(--paper-theme-postit-border);">border</div>
+</div>
 
 Available Post-it tokens:
 
@@ -48,6 +69,12 @@ the CSS custom properties downstream for product-specific palettes.
 
 Use `.paper-note-lines` on an outer page shell when you want a subtle notebook
 rule behind the content:
+
+<div class="paper-note-lines docs-note-line-preview border">
+  <p><strong>Notebook background</strong></p>
+  <p>The line art sits on the outer shell. Keep cards and menus on their own solid surfaces.</p>
+  <div class="paper border padding-small">Solid content surface over ruled paper.</div>
+</div>
 
 ```html
 <main class="paper-note-lines">
