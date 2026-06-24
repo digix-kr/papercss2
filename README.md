@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://papercss.digix.kr">
+  <a href="https://getpapercss2.digix.kr">
     <img src="docs/static/favicon.ico" alt="PaperCSS2 logo">
   </a>
 
@@ -32,6 +32,7 @@ Current fork baseline:
 
 - Upstream base: `papercss/papercss` `master` at `b341c16`, package version `1.9.2`.
 - Fork remote: `digix-kr/papercss2`.
+- Current fork release: [`v1.9.2-papercss2.1`](https://github.com/digix-kr/papercss2/releases/tag/v1.9.2-papercss2.1).
 - Embedded consumer: `meteorai-papercss` vendors this fork at
   `imports/vendor/papercss2/` and imports the built CSS from `dist/paper.css`.
 
@@ -102,6 +103,9 @@ Current fork changes:
 - Added notebook-style page backgrounds with `.paper-note-lines`,
   `--paper-note-lines-*` runtime tokens, and the `paper-note-lines` /
   `paper-note-lines-url` SCSS helpers.
+- Published the first fork-owned GitHub release point,
+  `v1.9.2-papercss2.1`, and linked it from the README and Hugo docs.
+- Moved fork documentation URLs to `https://getpapercss2.digix.kr`.
 
 Maintenance rule:
 
@@ -119,8 +123,9 @@ Maintenance rule:
 There are several fork-safe options available:
 
 - Download fork release assets from
-  [GitHub Releases](https://github.com/digix-kr/papercss2/releases) when a
-  release has been published.
+  [GitHub Releases](https://github.com/digix-kr/papercss2/releases), or use
+  the current fork release
+  [`v1.9.2-papercss2.1`](https://github.com/digix-kr/papercss2/releases/tag/v1.9.2-papercss2.1).
 - Clone the fork directly: `git clone https://github.com/digix-kr/papercss2.git`
 - Use it as a submodule or local file dependency while the fork is evolving.
 - Import the generated CSS from this fork:
@@ -139,9 +144,10 @@ You can also play with original, source files, written in SCSS, in `src/`.
 
 ## Documentation
 
-The fork docs are configured for [papercss.digix.kr](https://papercss.digix.kr)
-and are built from this repository. For local docs, run `npm run dev` and open
-the Hugo server URL printed by the command.
+The fork docs are configured for
+[getpapercss2.digix.kr](https://getpapercss2.digix.kr) and are built from this
+repository. For local docs, run `npm run dev` and open the Hugo server URL
+printed by the command.
 
 ## Customizing
 

@@ -12,6 +12,7 @@ local file dependency. The upstream `papercss` NPM package and CDN do not includ
 PaperCSS2 fork features.
 
 <div class="row flex-spaces text-center">
+  <a class="paper-btn margin" href="https://github.com/digix-kr/papercss2/releases/tag/v1.9.2-papercss2.1">Latest Fork Release</a>
   <a class="paper-btn margin" href="https://github.com/digix-kr/papercss2/releases">GitHub Releases</a>
   <a class="paper-btn margin" href="https://github.com/digix-kr/papercss2">GitHub Repository</a>
 </div>

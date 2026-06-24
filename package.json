@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/digix-kr/papercss2/issues"
   },
-  "homepage": "https://papercss.digix.kr",
+  "homepage": "https://getpapercss2.digix.kr",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.8.6",
